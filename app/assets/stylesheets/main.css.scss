@@ -1,0 +1,36 @@
+@import "susy";
+
+// susy setup
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+// page setup
+$logo-image : "logo.png";
+
+body {
+  background: url(background.png) repeat;
+}
+
+.logo {
+  position: relative;
+  height: image-height($logo-image);
+  width: image-width($logo-image)
+}
+
+// this needed to be able to overflow the logo image to the left
+.logo::before {
+  content: " ";
+  position: absolute;
+  left: -2 * $gutter-width;
+  background: url($logo-image) no-repeat;
+  height: image-height($logo-image);
+  width: image-width($logo-image);
+}
+
+.page {
+  @include container;
+  @include susy-grid-background;
+
+}
