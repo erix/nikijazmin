@@ -8,6 +8,8 @@ $grid-padding   : $gutter-width;
 
 // page setup
 $logo-image : "logo.png";
+$card-left-shadow: "leftshadow.png";
+$card-right-shadow: "rightshadow.png";
 
 body {
   background: url(background.png) repeat;
@@ -16,21 +18,49 @@ body {
 .logo {
   position: relative;
   height: image-height($logo-image);
-  width: image-width($logo-image)
-}
+  width: image-width($logo-image);
 
 // this needed to be able to overflow the logo image to the left
-.logo::before {
-  content: " ";
-  position: absolute;
-  left: -2 * $gutter-width;
-  background: url($logo-image) no-repeat;
-  height: image-height($logo-image);
-  width: image-width($logo-image);
+  &::before {
+    content: " ";
+    position: absolute;
+    left: -2 * $gutter-width;
+    background: url($logo-image) no-repeat;
+    height: image-height($logo-image);
+    width: image-width($logo-image);
+  }
 }
+
 
 .page {
   @include container;
   @include susy-grid-background;
+}
 
+.card {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: white;
+  margin-bottom: 2em;
+
+  &::after {
+    content: " ";
+    background: url($card-left-shadow) no-repeat;
+    height: image-height($card-left-shadow);
+    width: image-width($card-left-shadow);
+    position: absolute;
+    bottom: -1.4em;
+    left: -1em;
+  }
+
+  &::before {
+    content: " ";
+    background: url($card-right-shadow) no-repeat;
+    height: image-height($card-right-shadow);
+    width: image-width($card-right-shadow);
+    position: absolute;
+    bottom: -1.4em;
+    right: -1em;
+  }
 }
