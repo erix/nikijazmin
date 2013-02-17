@@ -1,3 +1,38 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.navigation {
+  padding-left: 0;
+  font-family: "Chalkduster", sans-serif;
+  text-transform: uppercase;
+
+  li {
+    height: 2em;
+    @include span-columns(2);
+    &:last-child {
+      @include omega;
+    }
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  }
+}
+
+.home {
+  background: url(home_underscore_thick.png) no-repeat bottom;
+}
+
+.apps {
+  background: url(apps_underscore_thin.png) no-repeat bottom;
+}
+
+.books {
+  background: url(books_underscore_thin.png) no-repeat bottom;
+}
+
+.blog {
+  background: url(blog_underscore_thin.png) no-repeat bottom;
+}
+
+.gallery {
+  background: url(gallery_underscore_thin.png) no-repeat bottom;
+}
+
+.hero {
+}
