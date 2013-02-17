@@ -1,5 +1,12 @@
 $accent-color : #00DE00;
 
+h2 {
+  color: $accent-color;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
 .navigation {
   padding-left: 0;
   font-family: "Chalkduster", sans-serif;
@@ -113,12 +120,6 @@ $accent-color : #00DE00;
     margin-top: 4em;
     text-align: right;
 
-    h2 {
-      color: $accent-color;
-      font-size: 1.2em;
-      margin-bottom: 1em;
-      text-transform: uppercase;
-    }
   }
 }
 
@@ -128,7 +129,7 @@ $accent-color : #00DE00;
     &::before {
       content: " ";
       float: right;
-      height: 10em;
+      height: 14em;
       background-color: red;
       display: block;
     }
