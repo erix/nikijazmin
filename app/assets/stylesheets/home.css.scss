@@ -34,7 +34,24 @@ $accent-color : #00DE00;
 }
 
 .gallery {
-  background: url(gallery_underscore_thin.png) no-repeat bottom;
+  background: url(gallery_underscore_thin.png) no-repeat bottom left;
+  &:hover {
+    background: url(gallery_underscore_thick.png) no-repeat bottom left;
+  }
+}
+
+.slider {
+  width: 784px;
+  height: 310px;
+  overflow: hidden;
+
+  ul {
+    width: 3000px;
+  }
+
+  li {
+    display: inline;
+  }
 }
 
 .hero {
@@ -100,6 +117,7 @@ $accent-color : #00DE00;
       color: $accent-color;
       font-size: 1.2em;
       margin-bottom: 1em;
+      text-transform: uppercase;
     }
   }
 }
