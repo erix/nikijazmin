@@ -1,3 +1,5 @@
+$accent-color : green;
+
 .navigation {
   padding-left: 0;
   font-family: "Chalkduster", sans-serif;
@@ -35,4 +37,33 @@
 }
 
 .hero {
+}
+
+.welcome {
+  .welcome-inner {
+    position: relative;
+    height: image-height("nikijazmin.png");
+    &::before {
+      content: " ";
+      background: url(nikijazmin.png) no-repeat;
+      width: image-width("nikijazmin.png");
+      height: image-height("nikijazmin.png");
+      position: absolute;
+      left: -73px;
+      top: -38px;
+    }
+  }
+
+  .textbox {
+    @include span-columns(5 omega);
+    @include post(1);
+    margin-top: 5em;
+    text-align: right;
+
+    h2 {
+      color: $accent-color;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+  }
 }

@@ -55,7 +55,7 @@ header {
 
 .card {
   @include container;
-  @include susy-grid-background;
+  // @include susy-grid-background;
   position: relative;
   background-color: white;
   margin-bottom: 2em;
