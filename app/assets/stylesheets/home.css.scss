@@ -67,3 +67,22 @@ $accent-color : green;
     }
   }
 }
+
+.about {
+  // make the image float to the bottom right by adding a flot on top of it
+  .about-wrapper {
+    &::before {
+      content: " ";
+      float: right;
+      height: 10em;
+      background-color: red;
+      display: block;
+    }
+
+    img { bottom: 0;
+      right: 0;
+      float: right;
+      clear: right;
+    }
+  }
+}

@@ -23,6 +23,8 @@ body {
 
 p {
   font-family: 'The Girl Next Door', cursive;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 h2 {
@@ -58,6 +60,8 @@ header {
   // @include susy-grid-background;
   position: relative;
   background-color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-bottom: 2em;
 
   &::after {
