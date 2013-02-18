@@ -75,6 +75,19 @@ header {
   }
 }
 
+@each $item in home, apps, books, blog, gallery {
+  .#{$item}.selected {
+    background: url(#{$item}_underscore_thick.png) no-repeat bottom left;
+  }
+  .#{$item} {
+    background: url(#{$item}_underscore_thin.png) no-repeat bottom left;
+
+    &:hover {
+      background: url(#{$item}_underscore_thick.png) no-repeat bottom left;
+    }
+  }
+}
+
 
 footer {
   @include bleed;

@@ -7,42 +7,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.home {
-  background: url(home_underscore_thick.png) no-repeat bottom left;
-
-  &:hover {
-    background: url(home_underscore_thick.png) no-repeat bottom left;
-  }
-}
-
-.apps {
-  background: url(apps_underscore_thin.png) no-repeat bottom left;
-  &:hover {
-    background: url(apps_underscore_thick.png) no-repeat bottom left;
-  }
-}
-
-.books {
-  background: url(books_underscore_thin.png) no-repeat bottom left;
-  &:hover {
-    background: url(books_underscore_thick.png) no-repeat bottom left;
-  }
-}
-
-.blog {
-  background: url(blog_underscore_thin.png) no-repeat bottom left;
-  &:hover {
-    background: url(blog_underscore_thick.png) no-repeat bottom left;
-  }
-}
-
-.gallery {
-  background: url(gallery_underscore_thin.png) no-repeat bottom left;
-  &:hover {
-    background: url(gallery_underscore_thick.png) no-repeat bottom left;
-  }
-}
-
 .slider {
   width: 780px;
   height: 310px;
