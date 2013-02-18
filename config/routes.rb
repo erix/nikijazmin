@@ -1,6 +1,7 @@
 Nikijazmin::Application.routes.draw do
   root :to => 'home#index'
   match "/books", :to => 'books#index'
+  match "/apps", :to => 'apps#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
