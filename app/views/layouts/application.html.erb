@@ -9,15 +9,13 @@
 <body>
 
 <div class="page">
-  <header>
-    <div class="logo"></div>
-  </header>
+  <%= render "shared/header"  %>
 
   <div class="content">
     <%= yield %>
   </div>
 
-  <footer></footer>
+  <%= render "shared/footer"  %>
 </div>
 
 </body>

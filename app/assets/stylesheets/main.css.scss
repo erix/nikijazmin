@@ -1,3 +1,5 @@
+$text-color : #888;
+
 // page setup
 $logo-image : "logo.png";
 $card-left-shadow: "leftshadow.png";
@@ -19,6 +21,7 @@ $card-right-shadow: "rightshadow.png";
 
 body {
   background: url(background.png) repeat;
+  color: $text-color;
 }
 
 p {
@@ -51,6 +54,55 @@ header {
   }
 }
 
+footer {
+  @include container;
+  border-top-style: solid;
+  border-top-color: $text-color;
+  border-top-width: 2px;
+
+  margin-bottom: 2em;
+}
+
+.social {
+  ul {
+  }
+  li {
+    float:left;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .facebook {
+    background: url(facebook.png) no-repeat;
+    width: image-width("facebook.png");
+    height: image-height("facebook.png");
+  }
+  .twitter {
+    background: url(twitter.png) no-repeat;
+    width: image-width("twitter.png");
+    height: image-height("twitter.png");
+  }
+  .pinterest {
+    background: url(pinterest.png) no-repeat;
+    width: image-width("pinterest.png");
+    height: image-height("pinterest.png");
+  }
+  .youtube {
+    background: url(youtube.png) no-repeat;
+    width: image-width("youtube.png");
+    height: image-height("youtube.png");
+  }
+  .email {
+    background: url(email.png) no-repeat;
+    width: image-width("email.png");
+    height: image-height("email.png");
+  }
+}
+
+.copyright {
+  text-align: right;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 12px;
+}
 
 .page {
 }
