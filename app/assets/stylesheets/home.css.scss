@@ -48,12 +48,8 @@ h2 {
   height: 310px;
   overflow: hidden;
 
-  ul {
-    width: 5000px;
-  }
-
-  li {
-    display: inline;
+  ul li { // the size of the ul is set from javascript
+    float: left;
   }
 }
 

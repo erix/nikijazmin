@@ -2,15 +2,15 @@
   <div class="slider">
     <ul>
       <% @hero_products.each do |p| %>
-        <li><img src="<%= p.banner %>" alt="<%= p.name %>"/></li> 
+        <li><img src="<%= p.banner %>" alt="<%= p.name %>"/></li>
       <% end %>
     </ul>
-  </div>
-  <div class="ribbon">
-    <h3><%= @hero_products.first.name %></h3>
-  </div>
-  <div class="store_badge">
-    <img src="assets/AppStore.svg" alt="" />
+    <div class="ribbon">
+      <h3><%= @hero_products.first.name %></h3>
+    </div>
+    <div class="store_badge">
+      <img src="assets/AppStore.svg" alt="" />
+    </div>
   </div>
 </div>
 
