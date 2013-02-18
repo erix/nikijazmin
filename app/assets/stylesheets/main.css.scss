@@ -35,7 +35,6 @@ h2 {
 }
 
 header {
-  @include container;
 }
 
 .logo {
@@ -55,12 +54,12 @@ header {
 }
 
 footer {
-  @include container;
+  @include bleed;
   border-top-style: solid;
   border-top-color: $text-color;
   border-top-width: 2px;
-
   margin-bottom: 2em;
+  clear: both;
 }
 
 .social {
@@ -104,18 +103,18 @@ footer {
   font-size: 12px;
 }
 
-.page {
+.container {
+  @include container;
+  // @include susy-grid-background;
 }
 
 .card {
-  @include container;
-  // @include susy-grid-background;
+  @include bleed;
   position: relative;
   background-color: white;
-  padding-top: 1em;
-  padding-bottom: 1em;
   margin-bottom: 4em;
 
+  // create the shadows dynamically
   &::after {
     content: " ";
     background: url($card-left-shadow) no-repeat;
@@ -136,4 +135,3 @@ footer {
     right: -1em;
   }
 }
-
