@@ -1,13 +1,13 @@
 <div class="hero">
   <div class="slider">
     <ul>
-      <li><img src="assets/toyswing_banner.png" alt="Toy Swing" /></li> 
-      <li><img src="assets/sweetdreams_banner.png" alt="Sweet Dreams" /></li>
-      <li><img src="assets/comeplaywithus_banner.png" alt="Come Play With Us" /></li>
+      <% @hero_products.each do |p| %>
+        <li><img src="<%= p.banner %>" alt="<%= p.name %>"/></li> 
+      <% end %>
     </ul>
   </div>
   <div class="ribbon">
-    <h3>Toy Swing</h3>
+    <h3><%= @hero_products.first.name %></h3>
   </div>
   <div class="store_badge">
     <img src="assets/AppStore.svg" alt="" />
