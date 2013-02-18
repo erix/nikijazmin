@@ -25,19 +25,32 @@ h2 {
 }
 
 .home {
-  background: url(home_underscore_thick.png) no-repeat bottom;
+  background: url(home_underscore_thick.png) no-repeat bottom left;
+
+  &:hover {
+    background: url(home_underscore_thick.png) no-repeat bottom left;
+  }
 }
 
 .apps {
-  background: url(apps_underscore_thin.png) no-repeat bottom;
+  background: url(apps_underscore_thin.png) no-repeat bottom left;
+  &:hover {
+    background: url(apps_underscore_thick.png) no-repeat bottom left;
+  }
 }
 
 .books {
-  background: url(books_underscore_thin.png) no-repeat bottom;
+  background: url(books_underscore_thin.png) no-repeat bottom left;
+  &:hover {
+    background: url(books_underscore_thick.png) no-repeat bottom left;
+  }
 }
 
 .blog {
-  background: url(blog_underscore_thin.png) no-repeat bottom;
+  background: url(blog_underscore_thin.png) no-repeat bottom left;
+  &:hover {
+    background: url(blog_underscore_thick.png) no-repeat bottom left;
+  }
 }
 
 .gallery {
