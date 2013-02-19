@@ -176,4 +176,31 @@ footer {
     bottom: -1.4em;
     right: -1em;
   }
+
+  // this inner container is needed to clear the floats
+  .card-inner {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.coming-soon {
+  position: relative;
+  background: url(comingsoon.png) no-repeat;
+  width: image-width("comingsoon.png");
+  height: image-height("comingsoon.png");
+  position: absolute;
+  top: -1.75em;
+  right: -1.75em;
+
+  span {
+    display: inline-block;
+    position: absolute;
+    top: 55px;
+    left: 120px;
+    color: #FFF;
+    font-size: 18px;
+    font-family: "Chalkduster", sans-serif;
+    @include rotate(25deg);
+  }
 }
