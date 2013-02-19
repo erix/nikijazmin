@@ -1,5 +1,7 @@
 $books-accent-color : rgb(253, 0, 0);
 .book {
+  padding-bottom: 2em;
+
   .text-container {
     @include span-columns(7 omega);
     margin-top: 4em;
