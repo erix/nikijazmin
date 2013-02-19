@@ -1,7 +1,14 @@
 class Product < ActiveRecord::Base
   TYPE = {:book => 0, :app => 1}
 
-  attr_accessible :banner, :desc, :icon, :mini_banner, :name, :store_link, :in_slider, :product_type
+  attr_accessible :banner, :desc, :icon, :mini_banner, :name, :store_link, :in_slider, :product_type, :release_date
+
+  scope :coming_soon, where(:release_date => nil)
+  scope :new, where(:release_date  => (Time.now.midnight - 1.month)..Time.now.midnight)
+  scope :books, where(:product_type => "book")
+  scope :apps, where(:product_type => "app")
+
+  default_scope order('release_date DESC')
 
   def self.type(t)
     TYPE[t]

@@ -19,6 +19,7 @@
   store_link: "https://itunes.apple.com/fi/book/come-play-with-us!/id579269946?mt=11"
   product_type: book
   icon: "/images/comeplaywithus_book.jpg"
+  release_date: 2012-11-15
 -
   name: "Niki and Jazmin's Christmas"
   desc: |
@@ -27,4 +28,5 @@
   store_link: "https://itunes.apple.com/fi/book/niki-and-jazmins-christmas/id580481514?mt=11"
   product_type: book
   icon: "/images/xmas_book.jpg"
+  release_date: 2012-11-20
 

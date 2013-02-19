@@ -1,5 +1,8 @@
 class BooksController < ApplicationController
   def index
-    @books = Product.find_all_by_product_type(Product.type(:book))
+    books = Product.books
+    coming_soon = Product.books.coming_soon
+    released = books.select { |book| book.release_date }
+    @books = coming_soon + released
   end
 end
