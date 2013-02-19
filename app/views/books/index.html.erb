@@ -1,3 +1,25 @@
 <div class="card">
   <%= render "shared/menu"  %>
 </div>
+
+<% @books.each do |book|  %>
+  <div class="card book">
+    <% if book.store_link.nil? %>
+      <div class="coming-soon"><span>Coming Soon</span></div>
+    <% end %>
+    <div class="card-inner">
+      <%= image_tag book.icon, :class => "product-icon"  %>
+      <div class="text-container">
+        <h2><%= book.name  %></h2>
+        <p><%= raw RedCloth.new(book.desc).to_html %></p>
+      </div>
+
+      <% if book.store_link %>
+        <div class="store-link">
+          <%= link_to image_tag("iBookstore.svg"), book.store_link  %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+<% end %>
