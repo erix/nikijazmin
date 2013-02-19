@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+require "yaml";
+
+puts __FILE__
+products = YAML::load(File.open(File.dirname(__FILE__) + '/products.yml'))
+products.each do |p|
+  new_product = Product.find_or_create_by_name(p)
+  new_product.update_attributes(p)
+end
