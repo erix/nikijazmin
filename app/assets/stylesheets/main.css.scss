@@ -19,6 +19,10 @@ $card-right-shadow: "rightshadow.png";
   font-style: normal;
 }
 
+// sprite sheets
+@import "menu/*.png";
+@include all-menu-sprites;
+
 body {
   background: url(background.png) repeat;
   color: $text-color;
@@ -60,30 +64,32 @@ header {
   overflow: hidden;
 
   li {
-    height: 2em;
+    height: 3em;
     @include span-columns(2);
     &:last-child {
       @include omega;
     }
     margin-top: 0.5em;
     margin-bottom: 1em;
+    padding-top: 1em;
 
     a {
       text-decoration: none;
       color: #000;
+      font-size: 20px;
     }
   }
 }
 
 @each $item in home, apps, books, blog, gallery {
   .#{$item}.selected {
-    background: url(#{$item}_underscore_thick.png) no-repeat bottom left;
+    @extend .menu-#{$item}_thick;
   }
   .#{$item} {
-    background: url(#{$item}_underscore_thin.png) no-repeat bottom left;
+    @extend .menu-#{$item}_thin;
 
     &:hover {
-      background: url(#{$item}_underscore_thick.png) no-repeat bottom left;
+      @extend .menu-#{$item}_thick;
     }
   }
 }
