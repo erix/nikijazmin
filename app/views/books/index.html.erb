@@ -4,9 +4,11 @@
 
 <% @books.each do |book|  %>
   <div class="card book">
+
     <% if book.store_link.nil? %>
       <div class="coming-soon"><span>Coming Soon</span></div>
     <% end %>
+
     <div class="card-inner">
       <%= image_tag book.icon, :class => "product-icon"  %>
       <div class="text-container">
@@ -19,7 +21,7 @@
           <%= link_to image_tag("iBookstore.svg"), book.store_link  %>
         </div>
       <% end %>
-
     </div>
+
   </div>
 <% end %>
