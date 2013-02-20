@@ -29,4 +29,39 @@
   product_type: book
   icon: "/images/xmas_book.jpg"
   release_date: 2012-11-20
+-
+  name: Spot The Difference
+  desc: |
+    Spot the difference in 18 wonderful pictures from the books of Niki and Jazmin!
 
+    There are 2 levels: easy and difficult. In easy level you have to find 3 out of 5 differences to get a yellow star. In difficult level you have to find all 5 differences between two pictures to get a red star. In the menu you can follow how many stars you have collected.
+
+    Are you able to find all the differences? Can you collect all the stars? 
+  icon: "/images/spotthedifference_icon.png"
+  wide_banner: "/images/spotTheDifference.jpg"
+  product_type: app
+-
+  name: Sticker Album
+  desc: |
+    There are three different scenes in this application which you can decorate based on your own taste. 
+
+    * Design and decorate the wallpaper of Niki and Jazmin’s room 
+    * Make the doctor’s waiting room cosier and play with the toys 
+    * Plant your own flowers, bushes and trees in the garden, so that every kind of insects and little animals could find their home.
+
+    [Watch the video on YouTube](http://youtu.be/meor6G9_yg0)
+  icon: "/images/stickeralbum_icon.png"
+  product_type: app
+  store_link: "https://itunes.apple.com/fi/app/stickeralbum/id593319772?mt=8"
+  release_date: 18-01-2013
+-
+  name: The toy swing
+  desc: |
+    The toy swing is an interactive book for iPad. You can follow the story about Niki & Jazmin making a new toy swing with Mommy for their stuffed animals. You can also play with some toys, make interaction with many figures. While listening to the story you can also play a treasure hunt - find all hidden starts on each page!
+    There is also a memory game in the end of the story.
+
+    [Watch the video on YouTube](http://youtu.be/uf__qABMOZ0)
+  icon: "/images/toyswing_icon.png"
+  product_type: app
+  store_link: "https://itunes.apple.com/fi/app/toyswing/id582249285?mt=8"
+  release_date: 12-02-2013

@@ -1,3 +1,17 @@
-// Place all the styles related to the apps controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$apps-accent-color : rgb(46,0,255);
+
+.app {
+  .wide-banner {
+    margin-left: -$gutter-width;
+  }
+
+  .app-icon {
+    display: inline-block;
+  }
+
+  h2 {
+    display: inline-block;
+    margin-left: 1em;
+    color: $apps-accent-color;
+  }
+}

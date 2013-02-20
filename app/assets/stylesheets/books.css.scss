@@ -1,7 +1,5 @@
 $books-accent-color : rgb(253, 0, 0);
 .book {
-  padding-bottom: 2em;
-
   .text-container {
     @include span-columns(7 omega);
     margin-top: 4em;
@@ -14,9 +12,4 @@ $books-accent-color : rgb(253, 0, 0);
     padding-left: 1em;
   }
 
-  .store-link {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
 }

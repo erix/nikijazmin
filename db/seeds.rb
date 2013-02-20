@@ -11,6 +11,11 @@ require "yaml";
 puts __FILE__
 products = YAML::load(File.open(File.dirname(__FILE__) + '/products.yml'))
 products.each do |p|
-  new_product = Product.find_or_create_by_name(p)
-  new_product.update_attributes(p)
+  puts "Processing '#{p["name"]}'"
+  new_product = Product.find_by_name(p["name"])
+  if new_product.nil?
+    new_product = Product.create(p)
+  else
+    new_product.update_attributes(p)
+  end
 end
