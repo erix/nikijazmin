@@ -13,7 +13,7 @@
       <%= image_tag book.icon, :class => "product-icon"  %>
       <div class="text-container">
         <h2><%= book.name  %></h2>
-        <p><%= raw RedCloth.new(book.desc).to_html %></p>
+        <p><%= dat_markdown(book.desc) %></p>
       </div>
 
       <% if book.store_link %>
