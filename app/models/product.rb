@@ -32,4 +32,8 @@ class Product < ActiveRecord::Base
   def book?
     product_type == :book
   end
+
+  def coming_soon?
+    store_link.nil?
+  end
 end

@@ -5,7 +5,7 @@
 <% @books.each do |book|  %>
   <div class="card book">
 
-    <% if book.store_link.nil? %>
+    <% if book.coming_soon? %>
       <div class="coming-soon"><span>Coming Soon</span></div>
     <% end %>
 
