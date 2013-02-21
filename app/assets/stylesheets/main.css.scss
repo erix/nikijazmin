@@ -159,21 +159,23 @@ footer {
   // create the shadows dynamically
   &::after {
     content: " ";
+    z-index: -1;
     background: url($card-left-shadow) no-repeat;
     height: image-height($card-left-shadow);
     width: image-width($card-left-shadow);
     position: absolute;
-    bottom: -1.4em;
+    bottom: -1.2em;
     left: -1em;
   }
 
   &::before {
     content: " ";
+    z-index: -1;
     background: url($card-right-shadow) no-repeat;
     height: image-height($card-right-shadow);
     width: image-width($card-right-shadow);
     position: absolute;
-    bottom: -1.4em;
+    bottom: -1.2em;
     right: -1em;
   }
 
