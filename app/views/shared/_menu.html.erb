@@ -1,8 +1,8 @@
 <ul class="navigation">
-  <%= nav_link "Home", root_path  %>
-  <%= nav_link "Apps", apps_path  %>
-  <%= nav_link "Books", books_path  %>
-  <li class="blog"><a href="/blog">Blog</a></li>
-  <li class="gallery"><a href="/gallery">Gallery</a></li>
+  <%= nav_link t("nav.home"), controller: "home", class: "home"  %>
+  <%= nav_link t("nav.apps"), controller: "apps", class: "apps"  %>
+  <%= nav_link t("nav.books"), controller: "books", class: "books"  %>
+  <li class="blog"><a href="/blog"><%= t "nav.blog" %></a></li>
+  <li class="gallery"><a href="/gallery"><%= t "nav.gallery" %></a></li>
 </ul>
 

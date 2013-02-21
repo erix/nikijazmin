@@ -1,9 +1,14 @@
 Nikijazmin::Application.routes.draw do
-  root :to => 'home#index'
-  match "/books", :to => 'books#index'
-  match "/apps", :to => 'apps#index'
-  match "/blog", :to => 'blog#index'
-  match "/gallery", :to => 'gallery#index'
+  scope ":locale", locale: /en|hu/ do
+    match "/books", :to => 'books#index'
+    match "/apps", :to => 'apps#index'
+    match "/blog", :to => 'blog#index'
+    match "/gallery", :to => 'gallery#index'
+    root :to => 'home#index'
+  end
+
+  match '*path', :to  => redirect("/#{I18n.default_locale}/%{path}")
+  match '/', :to  => redirect("/#{I18n.default_locale}/")
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

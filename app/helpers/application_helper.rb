@@ -1,9 +1,8 @@
 module ApplicationHelper
-  def nav_link(name, path)
-    controller_name = name.downcase
-    current = current_page? :controller => controller_name
-    selected = current ? " selected" : ""
-    content_tag "li", link_to(name, path), :class => "#{controller_name}#{selected}"
+  def nav_link(name, options)
+    current = current_page? options
+    selected = current ? "selected" : ""
+    content_tag "li", link_to(name, controller: options[:controller]), :class => "#{options[:class]} #{selected}"
   end
 
   def dat_markdown(text)
@@ -16,5 +15,9 @@ module ApplicationHelper
       badge = product.app? ? "AppStore.svg" : "iBookstore.svg"
       content_tag "div", link_to(image_tag(badge), product.store_link), class: "store-link"
     end
+  end
+
+  def get_locale
+    I18n.default_locale;
   end
 end
