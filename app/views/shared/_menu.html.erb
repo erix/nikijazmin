@@ -1,8 +1,8 @@
 <ul class="navigation">
-  <%= nav_link t("nav.home"), controller: "home", class: "home"  %>
-  <%= nav_link t("nav.apps"), controller: "apps", class: "apps"  %>
-  <%= nav_link t("nav.books"), controller: "books", class: "books"  %>
-  <li class="blog"><a href="/blog"><%= t "nav.blog" %></a></li>
-  <li class="gallery"><a href="/gallery"><%= t "nav.gallery" %></a></li>
+  <%= nav_link t("nav.home"), {controller: "home"}, {class: "home"}  %>
+  <%= nav_link t("nav.apps"), {controller: "apps"}, {class: "apps"}  %>
+  <%= nav_link t("nav.books"), {controller: "books"}, {class: "books"}  %>
+  <%= nav_link t("nav.blog"), {controller: "blog"}, {class: "blog"}  %>
+  <%= nav_link t("nav.gallery"), {controller: "gallery"}, {class: "gallery"}  %>
 </ul>
 

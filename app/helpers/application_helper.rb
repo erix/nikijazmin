@@ -1,8 +1,9 @@
 module ApplicationHelper
-  def nav_link(name, options)
+  def nav_link(name, options = {}, html_options = {})
     current = current_page? options
     selected = current ? "selected" : ""
-    content_tag "li", link_to(name, controller: options[:controller]), :class => "#{options[:class]} #{selected}"
+    html_options[:class] = "#{html_options[:class]} #{selected}"
+    content_tag "li", link_to(name, controller: options[:controller]), html_options
   end
 
   def dat_markdown(text)
