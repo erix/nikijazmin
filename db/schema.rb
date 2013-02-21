@@ -11,17 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130221123930) do
+ActiveRecord::Schema.define(:version => 20130221160610) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.string   "desc"
+    t.text     "desc",         :limit => 255
     t.string   "icon"
     t.string   "banner"
     t.string   "mini_banner"
     t.string   "store_link"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.boolean  "in_slider"
     t.integer  "product_type"
     t.date     "release_date"
