@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130220133114) do
+ActiveRecord::Schema.define(:version => 20130221123930) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130220133114) do
     t.integer  "product_type"
     t.date     "release_date"
     t.string   "wide_banner"
+    t.string   "locale"
   end
 
 end

@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   TYPE = {:book => 0, :app => 1}
 
-  attr_accessible :banner, :desc, :icon, :mini_banner, :wide_banner, :name, :store_link, :in_slider, :product_type, :release_date
+  attr_accessible :banner, :desc, :icon, :mini_banner, :wide_banner, :name, :store_link, :in_slider, :product_type, :release_date, :locale
 
   scope :coming_soon, where(:release_date => nil)
   scope :new_products, where(:release_date  => (Time.now.midnight - 1.month)..Time.now.midnight)
