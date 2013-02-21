@@ -15,3 +15,33 @@ $apps-accent-color : rgb(46,0,255);
     color: $apps-accent-color;
   }
 }
+
+.app:nth-child(2n+4) {
+  @include span-columns(5 omega);
+  @include bleed(0);
+  @include bleed($gutter-width, right);
+  .card-inner {
+    height: 35em;
+    @include bleed(0);
+    @include bleed($gutter-width, right);
+    padding-left: $gutter-width;
+    .mini-banner {
+      margin-left: -$gutter-width;
+    }
+  }
+}
+
+.app:nth-child(2n+3) {
+  @include span-columns(5);
+  @include bleed(0);
+  @include bleed($gutter-width, left);
+  .card-inner {
+    height: 35em;
+    @include bleed(0);
+    @include bleed($gutter-width, left);
+    padding-right: $gutter-width;
+    .mini-banner {
+      margin-left: -$gutter-width;
+    }
+  }
+}

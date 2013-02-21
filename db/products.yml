@@ -51,6 +51,7 @@
 
     [Watch the video on YouTube](http://youtu.be/meor6G9_yg0)
   icon: "/images/stickeralbum_icon.png"
+  mini_banner: "/images/stickeralbum_minibanner.jpg"
   product_type: app
   store_link: "https://itunes.apple.com/fi/app/stickeralbum/id593319772?mt=8"
   release_date: 18-01-2013
@@ -62,6 +63,7 @@
 
     [Watch the video on YouTube](http://youtu.be/uf__qABMOZ0)
   icon: "/images/toyswing_icon.png"
+  mini_banner: "/images/toyswing_minibanner.jpg"
   product_type: app
   store_link: "https://itunes.apple.com/fi/app/toyswing/id582249285?mt=8"
   release_date: 12-02-2013

@@ -10,7 +10,11 @@
     <% end %>
 
     <div class="card-inner">
-      <%= image_tag app.wide_banner, class: "wide-banner"  %>
+      <% if app.wide_banner  %>
+        <%= image_tag app.wide_banner, class: "wide-banner"  %>
+      <% else %>
+        <%= image_tag app.mini_banner, class: "mini-banner" %>
+      <% end %>
 
       <div class="text-container">
         <%= image_tag app.icon, class: "app-icon" %>
