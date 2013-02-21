@@ -9,6 +9,7 @@
   product_type: book
   icon: "/images/sweetdreams_book.jpg"
   banner: "/images/sweetdreams_banner.png"
+  in_slider: true
   locale: en
 -
   name: Szép álmokat!
@@ -23,6 +24,7 @@
   release_date: 2013-02-12
   icon: "/images/sweetdreams_book.jpg"
   banner: "/images/sweetdreams_banner.png"
+  in_slider: true
   locale: hu
 -
   name: Kauniita unia!
@@ -37,6 +39,7 @@
   release_date: 2013-02-14
   icon: "/images/sweetdreams_book.jpg"
   banner: "/images/sweetdreams_banner.png"
+  in_slider: true
   locale: fi
 -
   name: "Come, play with us!"
@@ -48,6 +51,7 @@
   product_type: book
   icon: "/images/comeplaywithus_book.jpg"
   banner: "/images/comeplaywithus_banner.png"
+  in_slider: true
   release_date: 2012-11-15
   locale: en
 -
@@ -58,6 +62,7 @@
   product_type: book
   icon: "/images/comeplaywithus_book.jpg"
   banner: "/images/comeplaywithus_banner.png"
+  in_slider: true
   release_date: 2012-11-13
   locale: hu
 -
@@ -68,6 +73,7 @@
   product_type: book
   icon: "/images/comeplaywithus_book.jpg"
   banner: "/images/comeplaywithus_banner.png"
+  in_slider: true
   release_date: 2012-11-16
   locale: fi
 -
@@ -199,6 +205,7 @@
   icon: "/images/toyswing_icon.png"
   mini_banner: "/images/toyswing_minibanner.jpg"
   banner: "/images/toyswing_banner.png"
+  in_slider: true
   product_type: app
   store_link: "https://itunes.apple.com/fi/app/toyswing/id582249285?mt=8"
   release_date: 12-02-2013
@@ -214,6 +221,7 @@
   icon: "/images/toyswing_icon.png"
   mini_banner: "/images/toyswing_minibanner.jpg"
   banner: "/images/toyswing_banner.png"
+  in_slider: true
   product_type: app
   store_link: "https://itunes.apple.com/fi/app/a-jatekhinta/id580814905?mt=8"
   release_date: 12-02-2013
@@ -227,6 +235,7 @@
   icon: "/images/toyswing_icon.png"
   mini_banner: "/images/toyswing_minibanner.jpg"
   banner: "/images/toyswing_banner.png"
+  in_slider: true
   product_type: app
   store_link: "https://itunes.apple.com/fi/app/lelukeinu/id583853360?mt=8"
   release_date: 12-02-2013
