@@ -207,7 +207,6 @@ footer {
 }
 
 .coming-soon {
-  position: relative;
   background: url(comingsoon.png) no-repeat;
   width: image-width("comingsoon.png");
   height: image-height("comingsoon.png");
@@ -217,15 +216,16 @@ footer {
   z-index: 9999;
 
   span {
-    display: inline-block;
-    position: absolute;
-    top: 55px;
-    left: 120px;
+    display: block;
+    width: 10em;
+    margin-top: 52px;
+    margin-left: 95px;
     color: #FFF;
     font-size: 18px;
     font-family: "Chalkduster", sans-serif;
     text-transform: uppercase;
-    @include rotate(25deg);
+    text-align: center;
+    @include rotate(23deg);
   }
 }
 
