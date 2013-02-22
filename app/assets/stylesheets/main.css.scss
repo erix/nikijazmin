@@ -23,6 +23,14 @@ $card-right-shadow: "rightshadow.png";
 @import "menu/*.png";
 @include all-menu-sprites;
 
+@import "social/*.png";
+
+@mixin social-background($icon) {
+  @include social-sprite($icon);
+  width: social-sprite-width($icon);
+  height: social-sprite-height($icon);
+}
+
 body {
   background: url(background.png) repeat;
   color: $text-color;
@@ -122,29 +130,19 @@ footer {
     margin-right: 5px;
   }
   .facebook {
-    background: url(facebook.png) no-repeat;
-    width: image-width("facebook.png");
-    height: image-height("facebook.png");
+    @include social-background(facebook);
   }
   .twitter {
-    background: url(twitter.png) no-repeat;
-    width: image-width("twitter.png");
-    height: image-height("twitter.png");
+    @include social-background(twitter);
   }
   .pinterest {
-    background: url(pinterest.png) no-repeat;
-    width: image-width("pinterest.png");
-    height: image-height("pinterest.png");
+    @include social-background(pinterest);
   }
   .youtube {
-    background: url(youtube.png) no-repeat;
-    width: image-width("youtube.png");
-    height: image-height("youtube.png");
+    @include social-background(youtube);
   }
   .email {
-    background: url(email.png) no-repeat;
-    width: image-width("email.png");
-    height: image-height("email.png");
+    @include social-background(email);
   }
 }
 
