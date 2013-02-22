@@ -66,7 +66,7 @@ h2 {
     height: image-height("nikijazmin.png");
     &::before {
       content: " ";
-      background: url(nikijazmin.png) no-repeat;
+      @include background-image-retina("nikijazmin");
       width: image-width("nikijazmin.png");
       height: image-height("nikijazmin.png");
       position: absolute;
@@ -86,7 +86,9 @@ h2 {
 .about {
   .about-inner {
     overflow: hidden;
-    background: url(csalad.png) no-repeat bottom right;
+    @include background-image-retina("csalad");
+    background-repeat: no-repeat;
+    background-position: bottom right;
   }
   // make the image float to the bottom right by adding a flot on top of it
   .floats {

@@ -2,11 +2,6 @@
 
 $text-color : #888;
 
-// page setup
-$logo-image : "logo.png";
-$card-left-shadow: "leftshadow.png";
-$card-right-shadow: "rightshadow.png";
-
 @font-face {
   font-family: 'Chalkduster';
   src: url('Chalkduster.ttf') format('truetype');
@@ -50,6 +45,7 @@ header {
   position: relative;
 
   .logo {
+    $logo-image : "logo.png";
     position: relative;
     height: image-height($logo-image);
     width: image-width($logo-image);
@@ -60,7 +56,7 @@ header {
       content: " ";
       position: absolute;
       left: -2 * $gutter-width;
-      background: url($logo-image) no-repeat;
+      @include background-image-retina("logo");
       height: image-height($logo-image);
       width: image-width($logo-image);
     }
@@ -170,10 +166,12 @@ footer {
   margin-bottom: 4em;
 
   // create the shadows dynamically
+  $card-left-shadow: "leftshadow.png";
+  $card-right-shadow: "rightshadow.png";
   &::after {
     content: " ";
     z-index: -1;
-    background: url($card-left-shadow) no-repeat;
+    @include background-image-retina("leftshadow");
     height: image-height($card-left-shadow);
     width: image-width($card-left-shadow);
     position: absolute;
@@ -184,7 +182,7 @@ footer {
   &::before {
     content: " ";
     z-index: -1;
-    background: url($card-right-shadow) no-repeat;
+    @include background-image-retina("rightshadow");
     height: image-height($card-right-shadow);
     width: image-width($card-right-shadow);
     position: absolute;
@@ -208,7 +206,7 @@ footer {
 }
 
 .coming-soon {
-  background: url(comingsoon.png) no-repeat;
+  @include background-image-retina("comingsoon");
   width: image-width("comingsoon.png");
   height: image-height("comingsoon.png");
   position: absolute;

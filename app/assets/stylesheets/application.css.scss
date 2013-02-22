@@ -38,6 +38,23 @@ $grid-padding   : $gutter-width;
   }
 }
 
+@mixin background-image-retina($image, $ext: "png") {
+  $image-file: "#{$image}.#{$ext}";
+  background-image: image-url($image-file);
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   -moz-min-device-pixel-ratio: 2 ),
+  only screen and (    -ms-min-device-pixel-ratio: 2 ),
+  only screen and (     -o-min-device-pixel-ratio: 2/1 ),
+  only screen and (        min-device-pixel-ratio: 2 ),
+  only screen and (                min-resolution: 192dpi ),
+  only screen and (                min-resolution: 2dppx ) {
+    @include background-size(image-width($image-file) auto);
+    background-image: image-url("#{$image}@2x.#{$ext}");
+  }
+}
+
 @import "main";
 @import "home";
 @import "books";
