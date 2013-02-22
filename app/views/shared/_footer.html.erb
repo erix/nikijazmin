@@ -1,11 +1,21 @@
 <footer>
   <div class="social">
     <ul>
-      <li class="facebook"></li>
-      <li class="twitter"></li>
-      <li class="pinterest"></li>
-      <li class="youtube"></li>
-      <li class="email"></li>
+      <li>
+        <%= facebook_link class: "facebook"  %>
+      </li>
+      <li>
+        <%= link_to "", "https://twitter.com/NikiAndJazmin", class: "twitter"  %>
+      </li>
+      <li>
+        <%= link_to "", "http://pinterest.com/nikiandjazmin", class: "pinterest"  %>
+      </li>
+      <li>
+        <%= link_to "", "http://www.youtube.com/user/NikiAndJazmin", class: "youtube"  %>
+      </li>
+      <li>
+        <%= mail_to "info@nikijazmin.com", "", :encode => "hex", class: "email"  %>
+      </li>
     </ul>
   </div>
   <div class="copyright">

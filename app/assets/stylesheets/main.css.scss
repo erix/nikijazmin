@@ -128,7 +128,12 @@ footer {
     float:left;
     margin-top: 5px;
     margin-right: 5px;
+
+    a {
+      display: block;
+    }
   }
+
   .facebook {
     @include social-background(facebook);
   }

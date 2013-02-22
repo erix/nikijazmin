@@ -21,4 +21,13 @@ module ApplicationHelper
   def get_locale
     I18n.default_locale;
   end
+
+  def facebook_link(html_options = {})
+    link = {}
+    link[:en] = "https://www.facebook.com/pages/Niki-and-Jazmin/130614283758707?ref=ts&fref=ts"
+    link[:hu] = "https://www.facebook.com/pages/Niki-es-Jazmin/410543298980679?ref=ts&fref=ts"
+    link[:fi] = "https://www.facebook.com/NikiJaJazmin?fref=ts"
+    link_to "", link[I18n.locale], html_options
+  end
+
 end
