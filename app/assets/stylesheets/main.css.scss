@@ -1,3 +1,5 @@
+@import "utilities/retina_sprites";
+
 $text-color : #888;
 
 // page setup
@@ -20,9 +22,6 @@ $card-right-shadow: "rightshadow.png";
 }
 
 // sprite sheets
-@import "menu/*.png";
-@include all-menu-sprites;
-
 @import "social/*.png";
 
 @mixin social-background($icon) {
@@ -99,16 +98,17 @@ header {
   }
 }
 
+$sprites: sprite-map("menu/*.png");
+$sprites2x: sprite-map("menu-retina/*.png");
+$item: home;
 @each $item in home, apps, books, blog, gallery {
-  .#{$item}.selected {
-    @extend .menu-#{$item}_thick;
-  }
   .#{$item} {
-    @extend .menu-#{$item}_thin;
+    @include retina-sprite($item, $hover: true);
+  }
 
-    &:hover {
-      @extend .menu-#{$item}_thick;
-    }
+  .#{$item}.selected {
+    @include retina-sprite(#{$item}_hover);
+    width: 144px;
   }
 }
 
