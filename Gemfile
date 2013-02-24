@@ -31,6 +31,7 @@ end
 
 gem 'redcarpet'
 gem 'hisrc-rails'
+gem 'dimensions-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

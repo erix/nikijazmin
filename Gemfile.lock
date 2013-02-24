@@ -44,6 +44,12 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    dimensions (1.2.0)
+    dimensions-rails (1.0.5)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      dimensions
+      railties (~> 3.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -122,6 +128,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
+  dimensions-rails
   hisrc-rails
   jquery-rails
   pg (= 0.12.2)
