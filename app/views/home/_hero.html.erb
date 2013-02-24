@@ -2,7 +2,9 @@
   <div class="slider">
     <ul>
       <% @hero_products.each do |p| %>
-        <li><img src="<%= p.banner %>" alt="<%= p.name %>"/></li>
+        <li>
+          <%= image_tag p.banner, alt: p.name  %>
+        </li>
       <% end %>
     </ul>
     <div class="ribbon">

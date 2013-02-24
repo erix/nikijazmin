@@ -11,13 +11,13 @@
 
     <div class="card-inner">
       <% if app.wide_banner  %>
-        <%= image_tag app.wide_banner, class: "wide-banner"  %>
+        <%= responsive_image_tag app.wide_banner, class: "wide-banner hisrc"  %>
       <% else %>
-        <%= image_tag app.mini_banner, class: "mini-banner" %>
+        <%= responsive_image_tag app.mini_banner, class: "mini-banner hisrc" %>
       <% end %>
 
       <div class="text-container">
-        <%= image_tag app.icon, class: "app-icon" %>
+        <%= responsive_image_tag app.icon, class: "app-icon hisrc" %>
         <h2><%= app.name %></h2>
         <p><%= dat_markdown(app.desc) %></p>
       </div>
