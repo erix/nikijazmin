@@ -56,7 +56,7 @@ header {
       content: " ";
       position: absolute;
       left: -2 * $gutter-width;
-      @include background-image-retina("logo");
+      @include background-image-retina($logo-image);
       height: image-height($logo-image);
       width: image-width($logo-image);
     }
@@ -171,7 +171,7 @@ footer {
   &::after {
     content: " ";
     z-index: -1;
-    @include background-image-retina("leftshadow");
+    @include background-image-retina($card-left-shadow);
     height: image-height($card-left-shadow);
     width: image-width($card-left-shadow);
     position: absolute;
@@ -182,7 +182,7 @@ footer {
   &::before {
     content: " ";
     z-index: -1;
-    @include background-image-retina("rightshadow");
+    @include background-image-retina($card-right-shadow);
     height: image-height($card-right-shadow);
     width: image-width($card-right-shadow);
     position: absolute;
@@ -206,7 +206,7 @@ footer {
 }
 
 .coming-soon {
-  @include background-image-retina("comingsoon");
+  @include background-image-retina("comingsoon.png");
   width: image-width("comingsoon.png");
   height: image-height("comingsoon.png");
   position: absolute;

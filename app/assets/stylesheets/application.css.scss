@@ -38,9 +38,8 @@ $grid-padding   : $gutter-width;
   }
 }
 
-@mixin background-image-retina($image, $ext: "png") {
-  $image-file: "#{$image}.#{$ext}";
-  background-image: image-url($image-file);
+@mixin background-image-retina($image) {
+  background-image: image-url($image);
 
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -50,8 +49,8 @@ $grid-padding   : $gutter-width;
   only screen and (        min-device-pixel-ratio: 2 ),
   only screen and (                min-resolution: 192dpi ),
   only screen and (                min-resolution: 2dppx ) {
-    @include background-size(image-width($image-file) auto);
-    background-image: image-url("#{$image}@2x.#{$ext}");
+    @include background-size(image-width($image) auto);
+    background-image: image-url(retina-filename($image));
   }
 }
 
