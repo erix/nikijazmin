@@ -1,4 +1,4 @@
--
+- &sweet_dreams
   name: "Sweet dreams!"
   desc: |
     Niki and Jazmin’s new book has two stories.
@@ -11,7 +11,8 @@
   banner: "/images/sweetdreams_banner.jpg"
   in_slider: true
   locale: en
--
+- 
+  <<: *sweet_dreams
   name: Szép álmokat!
   desc: |
     Niki és Jázmin legújabb könyve két új történetet tartalmaz. 
@@ -19,14 +20,11 @@
     Az első történet címe: Havas kaland. Ebben a mesében megismerheted Niki és Jázmin egy kellemes téli napját, megtudhatod hogyan viccelték meg Apát, hogyan szánkózott együtt a család, hogyan mászta meg Niki és Jázmin a meredek nagy dombot és még sok más érdekességet.
 
     Az második történet címe: Jó éjt gyerekek! Ebből a történetből megismerheted Niki és Jázmin esti szokásait, hogyan készülődnek lefekvéshez.  Vajon mennyi jó éjt puszi és hány ölelés után hajtják végre álomra a fejüket? "Anya, még egy puszi … még egy ölelés … kérlek, takarj be újra … Anya szomjas vagyok … nem találom Tehénkét … eltűnt Kicsi Zsiráf … jaj, most meg pisi lesz … Anya, ugye betakarsz?" - ugye másnak is ismerős?
-  product_type: book
   store_link: "https://itunes.apple.com/fi/book/szep-almokat!/id602676483?mt=11"
   release_date: 2013-02-12
-  icon: "/images/sweetdreams_book.jpg"
-  banner: "/images/sweetdreams_banner.jpg"
-  in_slider: true
   locale: hu
 -
+  <<: *sweet_dreams
   name: Kauniita unia!
   desc: |
     Nikin ja Jazmin uudessa kirjassa on kaksi tarinaa.
@@ -34,14 +32,10 @@
     Ensimmäinen tarina on nimeltään ’Lumiset seikkailut’. Se kertoo hauskasta talvipäivästä ja koko perheen kelkkailuretkestä. Kuulet myös miten Niki ja Jazmin huijasivat Isiä, kuinka he kiipesivät jyrkkää mäkeä ja monesta muusta jännittävästä tapahtumasta!
      
      Toisen tarinan nimi on ’Hyvää yötä!’ Pääset seuraamaan miten Niki ja Jazmin valmistautuvat nukkumaanmenoon. Kuinka monta hyvän yön suukkoa ja halausta vaaditaankaan että tytöt nukahtavat? ”Äiti, saisinko vielä yhden suukon, …halaa minua vielä kerran … Äiti, minulla on jano … Äiti, Pikku Lehmä on hukassa … Äiti, en löydä Pientä Kirahvia mistään! … Äiti, minulla on pissahätä … peittele minut vielä kerran…” Nämä ovat varmasti tuttuja tilanteita teillekin!
-  product_type: book
   store_link: "https://itunes.apple.com/fi/book/kauniita-unia!/id603475250?mt=11"
   release_date: 2013-02-14
-  icon: "/images/sweetdreams_book.jpg"
-  banner: "/images/sweetdreams_banner.jpg"
-  in_slider: true
   locale: fi
--
+- &come_play
   name: "Come, play with us!"
   desc: |
     Come, play with us! is a book for iPad with five stories about Niki & Jazmin. You can meet the girls while playing on the playground, being in the library, creating a new toy swing for their favourite animals. You can hear the story about how Mommy and Jazmin visited the doctor and you can see how did Niki end up in the bathtub fully- clothed.
@@ -55,28 +49,22 @@
   release_date: 2012-11-15
   locale: en
 -
+  <<: *come_play
   name: Gyere, játssz velünk!
   desc: |
     "Gyere, játssz velünk!" egy magyar nyelvű elektronikus könyv, amely 5 különböző történeten keresztül enged betekintést Niki és Jázmin mindennapjaiba. A könyvön keresztül együtt játszhatsz a lányokkal a játszótéren, a könyvtárban, megtudhatod hogyan készítettek játékhintát Anyával a kedvenc állatkáik számára és azt is mi történt Jázminnal a doktornéninél. Gyere, játssz velünk!
   store_link: "https://itunes.apple.com/fi/book/gyere-jatssz-velunk!/id578615398?mt=11"
-  product_type: book
-  icon: "/images/comeplaywithus_book.jpg"
-  banner: "/images/comeplaywithus_banner.jpg"
-  in_slider: true
   release_date: 2012-11-13
   locale: hu
 -
+  <<: *come_play
   name: Leikitään yhdessä!
   desc: |
     Leikitään yhdessä! on e-kirja iPadille, sisältäen viisi tarinaa tytöistä nimeltä Niki ja Jazmin. Pääset tapaamaan heitä leikkikentällä, kirjastossa, rakentamassa lelukeinua lemmikkieläimilleen ja monessa muussa paikassa…
   store_link: "https://itunes.apple.com/fi/book/leikitaan-yhdessa!/id579556769?mt=11"
-  product_type: book
-  icon: "/images/comeplaywithus_book.jpg"
-  banner: "/images/comeplaywithus_banner.jpg"
-  in_slider: true
   release_date: 2012-11-16
   locale: fi
--
+- &xmas
   name: "Niki and Jazmin's Christmas"
   desc: |
     Every child is excited about what they will find under the Christmas tree. Until the arrival of  Christmas Eve there are many interesting things we can do together. Come and spend the Advent season with Niki and Jazmin and see how they are preparing for Christmas and see what they will find under their Christmas tree.
@@ -88,17 +76,17 @@
   release_date: 2012-11-20
   locale: en
 -
+  <<: *xmas
   name: Niki és Jázmin karácsonya
   desc: |
     Lassan itt a karácsony! Minden kisgyerek izgatottan várja már mit is talán majd a karácsonyfa alatt. De addig amíg eljön a karácsony este rengeteg izgalmas dolgot csinálhatunk együtt. Gyere és tarts Nikivel és Jázminnal, nézd meg hogyan töltik el az ádventi időszakot, hogyan készülnek ők a karácsonyra és vajon mit találnak majd a karácsonyfa alatt.
 
     Várjuk együtt a karácsonyt Nikivel és Jázminnal!
   store_link: "https://itunes.apple.com/fi/book/niki-es-jazmin-karacsonya/id580149963?mt=11"
-  product_type: book
-  icon: "/images/xmas_book.jpg"
   release_date: 2012-11-19
   locale: hu
 -
+  <<: *xmas
   name: Nikin ja Jazminin joulu
   desc: |
     Joulu on jo ovella!
@@ -107,11 +95,9 @@
     
     Odotetaan joulua yhdessä Nikin ja Jazmin kanssa!
   store_link: "https://itunes.apple.com/fi/book/nikin-ja-jazminin-joulu/id580491469?mt=11"
-  product_type: book
-  icon: "/images/xmas_book.jpg"
   release_date: 2012-11-20
   locale: fi
--
+- &difference
   name: Spot The Difference
   desc: |
     Spot the difference in 18 wonderful pictures from the books of Niki and Jazmin!
@@ -124,6 +110,7 @@
   product_type: app
   locale: en
 -
+  <<: *difference 
   name: Találd meg a különbséget!
   desc: |
     Találd meg a különbség 18 pár csodálatos kép között, melyeket Niki és Jázmin  könyveiből válogattunk!
@@ -131,11 +118,9 @@
     A játékban két különböző nehézségi fok található: könnyű és nehéz. A könnyű szinten 3 különbséget kell megtalálni az 5 közül, hogy egy sárga csillagot kapj. A nehéz szinten mind az 5 különbséget meg kell találnod ahhoz, hogy egy piros csillag legyen a jutalmad. A menüben tudod nyomon követni, hogy hány csillagot sikerült összegyűjtened.
 
     Képes vagy megtalálni az összes különbséget? Sikerül összegyűjteni valamennyi csillagot?
-  icon: "/images/spotthedifference_icon.png"
-  wide_banner: "/images/spotTheDifference.jpg"
-  product_type: app
   locale: hu
 -
+  <<: *difference 
   name: Havaitse Eroavaisuudet
   desc: |
     Havaitse eroavaisuudet näissä 18 ihanassa kuvassa Nikin ja Jazminin kirjoista!
@@ -143,11 +128,8 @@
     Sovelluksessa on kaksi vaikeustasoa: helppo ja vaikea. Helpolla tasolla riittää että löydät kolme viidestä eroavaisuudesta saadaksesi keltaisen tähden. Vaikealla tasolla voit tavoitella punaista tähteä, jonka saamiseksi sinun pitää löytää kuvan kaikki viisi eroavaisuutta. Valikosta voit seurata kuinka monta tähteä olet kerännyt.
     
     Osaatko löytää kaikki eroavaisuudet? Pystytkö keräämään kaikki tähdet?
-  icon: "/images/spotthedifference_icon.png"
-  wide_banner: "/images/spotTheDifference.jpg"
-  product_type: app
   locale: fi
--
+- &sticker
   name: Sticker Album
   desc: |
     There are three different scenes in this application which you can decorate based on your own taste. 
@@ -164,6 +146,7 @@
   release_date: 18-01-2013
   locale: en
 - 
+  <<: *sticker
   name: Matricás album
   desc: |
     Niki és Jázmin matricás albumában 3 különböző helyszínt díszíthetsz ki a saját tetszésednek megfelelően:
@@ -173,13 +156,10 @@
     * Ültess virágokat, bokrokat a kertbe, hogy minél több bogárnak, rovarnak adhasson otthont  
 
     [YouTube video](http://youtu.be/jMVbrLeUJuM)
-  icon: "/images/stickeralbum_icon.png"
-  mini_banner: "/images/stickeralbum_minibanner.jpg"
-  product_type: app
   store_link: "https://itunes.apple.com/fi/app/stickeralbum/id593319772?mt=8"
-  release_date: 18-01-2013
   locale: hu
 -
+  <<: *sticker
   name: Tarra-albumi
   desc: |
     Nikin ja Jazminin tarra-albumissa on kolme eri kohtausta, jotka saattavat olla teille tuttuja jo Nikin ja Jazminin aiemmista tarinoista: Leikitään yhdessä!
@@ -189,13 +169,9 @@
     * Puutarhassa – Voit istuttaa puutarhaan omia kukkia, pensaita ja puita, niin että pienet hyönteiset ja muut eläimet löytävät kotinsa
 
     [YouTube video](http://youtu.be/5vJwSkIRcy0)
-  icon: "/images/stickeralbum_icon.png"
-  mini_banner: "/images/stickeralbum_minibanner.jpg"
-  product_type: app
   store_link: "https://itunes.apple.com/fi/app/stickeralbum/id593319772?mt=8"
-  release_date: 18-01-2013
   locale: fi
--
+- &toyswing
   name: The toy swing
   desc: |
     The toy swing is an interactive book for iPad. You can follow the story about Niki & Jazmin making a new toy swing with Mommy for their stuffed animals. You can also play with some toys, make interaction with many figures. While listening to the story you can also play a treasure hunt - find all hidden starts on each page!
@@ -211,6 +187,7 @@
   release_date: 12-02-2013
   locale: en
 -
+  <<: *toyswing
   name: A játékhinta
   desc: |
     "A játékhinta" egy magyar nyelvű interaktív elektronikus könyv iPadre. Meghallgathatod, hogyan készített Niki és Jázmin játékhintát Anyával a kedvenc állatkáik számára, miközben te is játszhatsz a lányok játékaival és természetesen Nikivel és Jázminnal. Niki és Jázmin történetének hallgatása közben részt vehetsz egy kincsvadászatban is! Minden oldalon három kicsi csillag rejtőzik és minden egyes oldalon egyre trükkösebb helyre bújnak.
@@ -218,25 +195,14 @@
     Megtalálod az összes csillagot?  A történet végén még egy memória játékot is találsz.
 
     [YouTube video](http://youtu.be/jZciumSnut4)
-  icon: "/images/toyswing_icon.png"
-  mini_banner: "/images/toyswing_minibanner.jpg"
-  banner: "/images/toyswing_banner.jpg"
-  in_slider: true
-  product_type: app
   store_link: "https://itunes.apple.com/fi/app/a-jatekhinta/id580814905?mt=8"
-  release_date: 12-02-2013
   locale: hu
 -
+  <<: *toyswing
   name: Lelukeinu
   desc: |
     Lelukeinu on vuorovaikutteinen kirja iPadille. Tässä tarinassa Niki ja Jazmin rakentavat äitinsä kanssa lelukeinua eläimilleen. Voit myös itse leikkiä kirjassa olevien lelujen ja monien hahmojen kanssa. Nikin ja Jazminin tarinaa kuunnelemassasi voit osallistua aarteenetsintään, jokaisella sivulla on piilossa kolme pientä tähteä  joita on yhä vaikeampi löytää. Mukana tarinan lopussa on myös hauska muistipeli.
 
     [YouTube video](http://youtu.be/jZciumSnut4)
-  icon: "/images/toyswing_icon.png"
-  mini_banner: "/images/toyswing_minibanner.jpg"
-  banner: "/images/toyswing_banner.jpg"
-  in_slider: true
-  product_type: app
   store_link: "https://itunes.apple.com/fi/app/lelukeinu/id583853360?mt=8"
-  release_date: 12-02-2013
   locale: fi
