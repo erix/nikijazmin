@@ -3,7 +3,7 @@
     <ul>
       <% @hero_products.each do |p| %>
         <li>
-          <%= image_tag p.banner, alt: p.name  %>
+          <%= responsive_image_tag p.banner, alt: p.name, class: "hisrc"  %>
         </li>
       <% end %>
     </ul>
