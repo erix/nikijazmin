@@ -1,0 +1,16 @@
+<% title "Admin/Post" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+<p>
+  <strong>Text:</strong>
+  <%= @post.text %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_post_path(@post) %> |
+  <%= link_to "Destroy", [:admin, @post], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_posts_path %>
+</p>

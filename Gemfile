@@ -7,6 +7,7 @@ gem 'rails', '3.2.12'
 
 group :development do
   gem 'sqlite3'
+  gem 'nifty-generators'
 end
 
 # Gems used only for assets and not required
@@ -47,3 +48,5 @@ gem 'dimensions-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test
