@@ -1,3 +1,15 @@
 <div class="card">
   <%= render "shared/menu"  %>
 </div>
+
+<div class="card post">
+  <div class="card-inner">
+    <% for post in @posts do %>
+      <%= content_tag :span, l(post.updated_at.to_date, :format => :long), class: 'date'  %>
+      <h2>
+        <%= post.title %>
+      </h2>
+      <%= dat_markdown post.text  %>
+    <% end %>
+  </div>
+</div>
