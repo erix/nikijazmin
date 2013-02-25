@@ -3,7 +3,7 @@
     <ul>
       <% @hero_products.each do |p| %>
         <li>
-          <%= responsive_image_tag p.banner, alt: p.name, class: "hisrc"  %>
+        <%= responsive_image_tag p.banner, alt: p.name, class: "hisrc", data: {href: p.store_link} %>
         </li>
       <% end %>
     </ul>
@@ -11,7 +11,7 @@
       <h3><%= @hero_products.first.name %></h3>
     </div>
     <div class="store_badge">
-      <%= image_tag "AppStore.svg" %>
+      <%= link_to image_tag("AppStore.svg"), @hero_products.first.store_link %>
     </div>
   </div>
 </div>

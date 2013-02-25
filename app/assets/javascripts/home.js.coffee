@@ -2,6 +2,7 @@ $.fn.slider = ->
   $ul = $(@find("ul"))
   images = $ul.find("img")
   $ribbon_text = $(@find(".ribbon h3"))
+  $store_link = $(@find(".store_badge a"))
   current = 0;
   timer_interval = 3000 # 3 seconds
   image_width = 0;
@@ -14,7 +15,14 @@ $.fn.slider = ->
     else
       margin = "-=#{image_width}"
     $ul.animate {marginLeft: margin}, 600, ->
+      # change the ribbon text and the store link
       $ribbon_text.text $(images[current]).attr('alt')
+      href = $(images[current]).data('href')
+      if href
+        $store_link.parent().show()
+        $store_link.attr("href", $(images[current]).data("href"))
+      else
+        $store_link.parent().hide()
 
   $ul.click(click_handler)
 
