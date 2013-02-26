@@ -1,0 +1,12 @@
+<div class="card post">
+  <div class="card-inner">
+    <div class="text-container">
+      <%= content_tag :span, l(post.updated_at.to_date, :format => :long), class: 'date'  %>
+      <h2>
+        <%= link_to post.title, blog_post_path(post) %>
+      </h2>
+      <%= dat_markdown post.text  %>
+    </div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+  </div>
+</div>

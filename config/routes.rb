@@ -4,6 +4,7 @@ Nikijazmin::Application.routes.draw do
   scope ":locale", locale: /en|hu|fi/ do
     match "/books", :to => 'books#index'
     match "/apps", :to => 'apps#index'
+    match "/blog/post/:id" => 'blog#show', :as => 'blog_post'
     match "/blog", :to => 'blog#index'
     match "/gallery", :to => 'gallery#index'
     root :to => 'home#index'
