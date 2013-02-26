@@ -1,5 +1,8 @@
 Nikijazmin::Application.routes.draw do
-  namespace(:admin){ resources :posts }
+  namespace(:admin) do
+    resources :posts
+    match "/posts/publish/:id" => "posts#publish", :as => "publish_post"
+  end
 
   scope ":locale", locale: /en|hu|fi/ do
     match "/books", :to => 'books#index'

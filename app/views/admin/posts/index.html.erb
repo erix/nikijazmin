@@ -8,7 +8,7 @@
   </tr>
   <% for post in @posts %>
     <tr>
-      <td><%= post.updated_at.to_date %></td>
+      <td><%= post.published? ? post.published_at.to_date : post.updated_at.to_date %></td>
       <td><%= link_to post.title, edit_admin_post_path(post) %></td>
       <td>
         <%= link_to blog_post_path(post), class: "btn btn-mini" do %>
@@ -21,10 +21,18 @@
           Edit
         <% end %>
 
+        <% if not post.published? %>
+          <%= link_to  admin_publish_post_path(post), class: "btn btn-mini" do %>
+            <%= content_tag(:i, "", class: "icon-edit") %>
+            Publish
+          <% end %>
+        <% end %>
+
         <%= link_to [:admin, post], :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini btn-danger" do %>
           <%= content_tag(:i, "", class: "icon-remove icon-white")  %>
           Delete
         <% end %>
+
     </td>
     </tr>
   <% end %>

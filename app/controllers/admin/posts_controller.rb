@@ -1,7 +1,6 @@
 class Admin::PostsController < ApplicationController
   def index
     @posts = Post.all
-    logger.debug @posts
   end
 
   def show
@@ -41,5 +40,14 @@ class Admin::PostsController < ApplicationController
     @post.destroy
     flash[:success] = "Post destroyed"
     redirect_to admin_posts_url
+  end
+
+  def publish
+    p = Post.find(params[:id])
+    if not p.nil?
+      p.published_at = Time.now
+      p.save!
+    end
+    redirect_to admin_posts_path
   end
 end
