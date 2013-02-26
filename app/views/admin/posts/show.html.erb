@@ -1,12 +1,8 @@
-<% title "Admin/Post" %>
-
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <h1><%= @post.title %></h1>
 </p>
 <p>
-  <strong>Text:</strong>
-  <%= @post.text %>
+  <%= dat_markdown @post.text %>
 </p>
 
 <p>
