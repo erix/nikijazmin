@@ -1,17 +1,19 @@
-<% title "Admin/Posts" %>
+<% title "Blog posts" %>
 
-<table>
+<table class="table table-striped">
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Date</th>
+    <th>Post title</th>
+    <th>Actions</th>
   </tr>
   <% for post in @posts %>
     <tr>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
-      <td><%= link_to "Show", [:admin, post] %></td>
-      <td><%= link_to "Edit", edit_admin_post_path(post) %></td>
-      <td><%= link_to "Destroy", [:admin, post], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= post.updated_at.to_date %></td>
+      <td><%= link_to post.title, [:admin, post] %></td>
+      <td>
+        <%= link_to content_tag(:i, "", class: "icon-edit") + "Edit", edit_admin_post_path(post), class: "btn btn-mini" %>
+        <%= link_to content_tag(:i, "", class: "icon-remove") + "Destroy", [:admin, post], :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini" %>
+    </td>
     </tr>
   <% end %>
 </table>
