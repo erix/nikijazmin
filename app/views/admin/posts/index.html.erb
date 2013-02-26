@@ -9,10 +9,22 @@
   <% for post in @posts %>
     <tr>
       <td><%= post.updated_at.to_date %></td>
-      <td><%= link_to post.title, [:admin, post] %></td>
+      <td><%= link_to post.title, edit_admin_post_path(post) %></td>
       <td>
-        <%= link_to content_tag(:i, "", class: "icon-edit") + "Edit", edit_admin_post_path(post), class: "btn btn-mini" %>
-        <%= link_to content_tag(:i, "", class: "icon-remove") + "Destroy", [:admin, post], :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini" %>
+        <%= link_to blog_post_path(post), class: "btn btn-mini" do %>
+          <%= content_tag(:i, "", class: "icon-eye-open") %>
+          Show on page
+        <% end %>
+
+        <%= link_to  edit_admin_post_path(post), class: "btn btn-mini" do %>
+          <%= content_tag(:i, "", class: "icon-edit") %>
+          Edit
+        <% end %>
+
+        <%= link_to [:admin, post], :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini btn-danger" do %>
+          <%= content_tag(:i, "", class: "icon-remove icon-white")  %>
+          Delete
+        <% end %>
     </td>
     </tr>
   <% end %>
