@@ -22,3 +22,12 @@ $blog-accent-color : rgb(255, 148, 3);
     }
   }
 }
+
+.share {
+  @include bleed;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top-style: solid;
+  border-top-color: #888;
+  border-top-width: 1px;
+}

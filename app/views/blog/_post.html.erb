@@ -6,7 +6,9 @@
         <%= link_to post.title, blog_post_path(post) %>
       </h2>
       <%= dat_markdown post.text  %>
+      <div class="share">
+        <div class="fb-like" data-send="false" data-width="450" data-show-faces="false" href="<%= blog_post_url(post) %>"></div>
+      </div>
     </div>
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
   </div>
 </div>
