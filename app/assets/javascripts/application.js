@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require hisrc
+//= require bootstrap-alert
 //= require_tree .
