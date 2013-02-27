@@ -2,6 +2,7 @@ Nikijazmin::Application.routes.draw do
 
   namespace(:admin) do
     match "/login" => "sessions#new", as: "login"
+    match "/logout" => "sessions#destroy", as: "logout"
     resources :users
     resources :sessions
     resources :posts

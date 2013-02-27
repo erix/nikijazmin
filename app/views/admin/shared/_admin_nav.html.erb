@@ -4,6 +4,9 @@
       <li><%= link_to "Products", "#"  %></li>
       <li class=<%= "active" if current_page? admin_posts_path %>><%= link_to "Posts", admin_posts_path %></li>
     </ul>
+    <ul class="nav pull-right">
+      <li><%= link_to "Logout", admin_logout_path %></li>
+    </ul>
   </div>
 </div>
 
