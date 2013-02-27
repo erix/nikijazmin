@@ -1,0 +1,24 @@
+<% title "Products" %>
+
+<table class="table table-striped">
+  <tr>
+    <th>Date</th>
+    <th>Product name</th>
+    <th>Actions</th>
+  </tr>
+  <% for product in @products %>
+    <tr>
+      <td><%= product.updated_at.to_date %></td>
+      <td><%= link_to product.name, edit_admin_product_path(product) %></td>
+      <td>
+        <%= link_to  edit_admin_product_path(product), class: "btn btn-mini" do %>
+          <%= content_tag(:i, "", class: "icon-edit") %>
+          Edit
+        <% end %>
+    </td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New product", new_admin_product_path, class: "btn btn-success" %></p>
+
