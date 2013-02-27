@@ -1,4 +1,4 @@
-class Admin::PostsController < ApplicationController
+class Admin::PostsController < Admin::AdminController
   def index
     @posts = Post.all
   end
