@@ -11,7 +11,8 @@
       <td><%= post.published? ? post.published_at.to_date : post.updated_at.to_date %></td>
       <td><%= link_to post.title, edit_admin_post_path(post) %></td>
       <td>
-        <%= link_to blog_post_path(post), class: "btn btn-mini" do %>
+        <%# FIXME: get locale from the post %>
+        <%= link_to blog_post_path(post, locale: :en), class: "btn btn-mini" do %>
           <%= content_tag(:i, "", class: "icon-eye-open") %>
           Show on page
         <% end %>

@@ -11,4 +11,8 @@ class Admin::AdminController < ApplicationController
   end
 
   helper_method :current_user
+
+  def default_url_options(options={})
+    {}
+  end
 end
