@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
 
   # use lambda to get around the caching to have current values
   scope :new_products, ->{where(:release_date  => (Time.now.midnight - 1.month)..Time.now.midnight)}
-  default_scope ->{order('release_date DESC').where(:locale  => I18n.locale)}
+  default_scope order('release_date DESC')
 
   def self.type(t)
     TYPE[t]
