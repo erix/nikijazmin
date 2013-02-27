@@ -6,6 +6,7 @@ Nikijazmin::Application.routes.draw do
     resources :sessions
     resources :posts
     match "/posts/publish/:id" => "posts#publish", :as => "publish_post"
+    match "/" => redirect("/admin/posts")
   end
 
   scope ":locale", locale: /en|hu|fi/ do

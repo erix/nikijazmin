@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="container">
+      <%= render "admin/shared/admin_nav"  %>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, :class => "alert alert-#{name}" do %>
           <button type="button" class="close" data-dismiss="alert">&times;</button>
