@@ -1,4 +1,6 @@
 class Admin::PostsController < Admin::AdminController
+  before_filter :authorize
+
   def index
     @posts = Post.all
   end

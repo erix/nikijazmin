@@ -1,6 +1,7 @@
 Nikijazmin::Application.routes.draw do
 
   namespace(:admin) do
+    match "/login" => "sessions#new", as: "login"
     resources :users
     resources :sessions
     resources :posts
