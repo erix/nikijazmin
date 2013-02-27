@@ -1,4 +1,7 @@
 Nikijazmin::Application.routes.draw do
+  resources :users
+
+
   namespace(:admin) do
     resources :posts
     match "/posts/publish/:id" => "posts#publish", :as => "publish_post"
