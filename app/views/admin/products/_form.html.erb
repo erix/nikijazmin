@@ -1,0 +1,51 @@
+<%= form_for [:admin, @product], html: { class: "form-horizontal"} do |f| %>
+  <%= f.error_messages %>
+  <div class="control-group">
+    <%= f.label :name, class: "control-label" %>
+    <div class="controls">
+      <%= f.text_field :name, class: "input-xxlarge" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :desc, class: "control-label" %>
+    <div class="controls">
+      <%= f.text_area :desc , class: "input-xxlarge" %><br/>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :product_type, class: "control-label" %>
+    <div class="controls">
+      <%= f.select :product_type, Product::TYPES, {}, class: "input-small" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :store_link, class: "control-label" %>
+    <div class="controls">
+      <%= f.text_field :store_link, class: "input-xxlarge" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :locale, class: "control-label" %>
+    <div class="controls">
+      <%= f.select :locale, I18n.available_locales, {}, class: "input-small" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :in_slider, class: "control-label" %>
+    <div class="controls">
+      <%= f.check_box :in_slider %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :release_date, class: "control-label" %>
+    <div class="controls">
+      <%= f.date_select :release_date, {}, class: "input-small" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit class: "btn" %>
+    </div>
+  </div>
+<% end %>
+
