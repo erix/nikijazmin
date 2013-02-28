@@ -161,9 +161,11 @@ footer {
 
 .card {
   @include bleed;
+  background-image: url('lightpaperfibers.png');
   position: relative;
   background-color: white;
   margin-bottom: 4em;
+  box-shadow: 0 0 30px rgb(200, 200, 200);
 
   // create the shadows dynamically
   $card-left-shadow: "leftshadow.png";
