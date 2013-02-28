@@ -30,11 +30,11 @@ class Product < ActiveRecord::Base
   end
 
   def app?
-    product_type == :app
+    product_type == TYPES[:app]
   end
 
   def book?
-    product_type == :book
+    product_type == TYPES[:book]
   end
 
   def coming_soon?
