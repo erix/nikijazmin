@@ -2,4 +2,6 @@
   <%= render "shared/menu"  %>
 </div>
 
-<%= render :partial => 'post', :collection => @posts  %>
+<% for post in @posts  %>
+  <%= render partial: "post", object: post  %>
+<% end %>
