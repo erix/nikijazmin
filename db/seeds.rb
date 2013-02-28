@@ -8,14 +8,21 @@
 #
 require "yaml";
 
-puts __FILE__
 products = YAML::load(File.open(File.dirname(__FILE__) + '/products.yml'))
 products.each do |p|
-  puts "Processing '#{p["name"]}'"
+  print "Processing '#{p["name"]}': "
   new_product = Product.find_by_name(p["name"])
   if new_product.nil?
+    puts "New"
     new_product = Product.create(p)
   else
+    puts "Update"
     new_product.update_attributes(p)
   end
+end
+
+# Create the admin user
+if User.find_by_name('admin').nil?
+  puts "Creating the admin user"
+  User.create(name: 'admin', password: 'admin')
 end
