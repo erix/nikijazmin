@@ -5,6 +5,7 @@ class Admin::AlbumsController < Admin::AdminController
 
   def new
     @album = Album.new
+    @album.pictures.build
   end
 
   def create

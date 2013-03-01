@@ -1,3 +1,7 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+$ ->
+    $('#fileupload').fileupload()
+    # Load existing files:
+    $('#fileupload').each ->
+      $.getJSON this.action, (result) =>
+          if result
+            $(this).fileupload('option', 'done').call(this, null, {result:result})

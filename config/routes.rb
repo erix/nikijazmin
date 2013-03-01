@@ -1,25 +1,14 @@
 Nikijazmin::Application.routes.draw do
 
-  get "albums/new"
-
-  get "albums/create"
-
-  get "albums/update"
-
-  get "albums/edit"
-
-  get "albums/destroy"
-
-  get "albums/index"
-
-  get "albums/show"
 
   namespace(:admin) do
     resources :users
     resources :sessions
     resources :posts
     resources :products
-    resources :albums
+    resources :albums do
+      resources :pictures
+    end
     match "/login" => "sessions#new", as: "login"
     match "/logout" => "sessions#destroy", as: "logout"
     match "/posts/publish/:id" => "posts#publish", :as => "publish_post"

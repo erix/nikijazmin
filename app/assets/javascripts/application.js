@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require hisrc
 //= require bootstrap-alert
+//= require jquery-fileupload
 //= require_tree .

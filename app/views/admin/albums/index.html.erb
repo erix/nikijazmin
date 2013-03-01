@@ -3,11 +3,13 @@
 <table class="table table-striped">
   <tr>
     <th>Album name</th>
+    <th>Pictures</th>
     <th>Actions</th>
   </tr>
   <% for album in @albums %>
     <tr>
       <td><%= album.name %></td>
+      <td><%= album.pictures.count %></td>
       <td>
         <%= link_to  edit_admin_album_path(album), class: "btn btn-mini" do %>
           <%= content_tag(:i, "", class: "icon-edit") %>

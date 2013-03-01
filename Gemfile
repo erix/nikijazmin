@@ -37,6 +37,7 @@ gem 'dimensions-rails'
 gem 'rails-i18n'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "paperclip", "~> 3.0"
+gem 'jquery-fileupload-rails'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
