@@ -1,0 +1,25 @@
+<% title "Albums" %>
+
+<table class="table table-striped">
+  <tr>
+    <th>Album name</th>
+    <th>Actions</th>
+  </tr>
+  <% for album in @albums %>
+    <tr>
+      <td><%= album.name %></td>
+      <td>
+        <%= link_to  edit_admin_album_path(album), class: "btn btn-mini" do %>
+          <%= content_tag(:i, "", class: "icon-edit") %>
+          Edit
+        <% end %>
+        <%= link_to [:admin, album], :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini btn-danger" do %>
+          <%= content_tag(:i, "", class: "icon-remove icon-white")  %>
+          Delete
+        <% end %>
+    </td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New album", new_admin_album_path, class: "btn btn-success" %></p>
