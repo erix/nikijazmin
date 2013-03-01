@@ -34,6 +34,10 @@ GEM
       sass (~> 3.2)
     builder (3.0.4)
     chunky_png (1.2.7)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -77,6 +81,12 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
     nifty-generators (0.4.6)
+    paperclip (3.4.1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.0)
+      mime-types
     pg (0.12.2)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -144,6 +154,7 @@ DEPENDENCIES
   jquery-rails
   mocha
   nifty-generators
+  paperclip (~> 3.0)
   pg (= 0.12.2)
   rails (= 3.2.12)
   rails-i18n
