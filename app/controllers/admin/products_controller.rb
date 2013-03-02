@@ -12,7 +12,7 @@ class Admin::ProductsController < Admin::AdminController
     product = Product.new(params[:product])
     if product.save
       flash[:success] = "Product successfully created"
-      redirect_to admin_products_path
+      redirect_to products_path
     else
       flash[:error] = "Failed to create new product"
       render "new"
@@ -25,7 +25,7 @@ class Admin::ProductsController < Admin::AdminController
       product.update_attributes(params[:product])
       flash[:success] = "Product successfully updated"
     end
-    redirect_to admin_products_path
+    redirect_to products_path
   end
 
   def edit

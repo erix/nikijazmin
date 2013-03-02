@@ -1,12 +1,12 @@
 <div class="navbar">
   <div class="navbar-inner">
     <ul class="nav">
-      <li class=<%= "active" if current_page? admin_products_path %>><%= link_to "Products", admin_products_path %></li>
-      <li class=<%= "active" if current_page? admin_posts_path %>><%= link_to "Posts", admin_posts_path %></li>
-      <li class=<%= "active" if current_page? admin_albums_path %>><%= link_to "Albums", admin_albums_path %></li>
+      <li class=<%= "active" if current_page? products_path %>><%= link_to "Products", products_path %></li>
+      <li class=<%= "active" if current_page? posts_path %>><%= link_to "Posts", posts_path %></li>
+      <li class=<%= "active" if current_page? albums_path %>><%= link_to "Albums", albums_path %></li>
     </ul>
     <ul class="nav pull-right">
-      <li><%= link_to "Logout", admin_logout_path %></li>
+      <li><%= link_to "Logout", logout_path %></li>
     </ul>
   </div>
 </div>

@@ -17,7 +17,7 @@ class Admin::PostsController < Admin::AdminController
     @post = Post.new(params[:post])
     if @post.save
       flash[:success] = "Post created"
-      redirect_to [:admin, @post]
+      redirect_to posts_path
     else
       render :action => 'new'
     end
@@ -31,7 +31,7 @@ class Admin::PostsController < Admin::AdminController
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
       flash[:success] = "Post updated"
-      redirect_to [:admin, @post]
+      redirect_to posts_path
     else
       render :action => 'edit'
     end
@@ -41,7 +41,7 @@ class Admin::PostsController < Admin::AdminController
     @post = Post.find(params[:id])
     @post.destroy
     flash[:success] = "Post destroyed"
-    redirect_to admin_posts_url
+    redirect_to posts_path
   end
 
   def publish
@@ -50,6 +50,6 @@ class Admin::PostsController < Admin::AdminController
       p.published_at = Time.now
       p.save!
     end
-    redirect_to admin_posts_path
+    redirect_to posts_path
   end
 end
