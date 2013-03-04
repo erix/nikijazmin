@@ -15,7 +15,7 @@ class Admin::PicturesController < ApplicationController
     picture = Picture.new(params[:picture])
     album = Album.find(params[:album_id])
     album.pictures << picture
-    respond_with({ :files => [picture.to_jq_upload] }, :location => admin_album_picture_path(picture.album_id, picture))
+    respond_with({ :files => [picture.to_jq_upload] }, :location => album_picture_path(picture.album_id, picture))
   end
 
   def destroy
