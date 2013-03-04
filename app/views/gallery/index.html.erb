@@ -7,6 +7,7 @@
     <ul>
       <% for album in @albums %>
         <li>
+        <a href="<%= album_pictures_path(album)  %>" class="colorbox-item">
           <div class="stack">
             <span class="sheet_1">
               <%= responsive_image_tag picture(album,1).image(:thumb)  %>
@@ -23,6 +24,7 @@
               </div>
             </div>
           </div>
+        </a>
         </li>
       <% end %>
     </ul>

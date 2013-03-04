@@ -15,4 +15,5 @@
 //= require hisrc
 //= require bootstrap-alert
 //= require jquery-fileupload
+//= require colorbox/jquery.colorbox
 //= require_tree .
