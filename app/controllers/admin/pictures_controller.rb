@@ -4,7 +4,9 @@ class Admin::PicturesController < ApplicationController
   def index
     @pictures = Album.find(params[:album_id]).pictures
     files = @pictures.map {|p| p.to_jq_upload}
-    respond_with :files => files
+    respond_with :files => files do |format|
+      format.html { render :layout => !request.xhr? }
+    end
   end
 
   def show

@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-migrate-1.1.1
 //= require hisrc
 //= require bootstrap-alert
 //= require jquery-fileupload
 //= require colorbox/jquery.colorbox
+//= require royalslider/jquery.royalslider.min
 //= require_tree .
