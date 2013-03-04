@@ -9,14 +9,14 @@
         <li>
           <div class="stack">
             <span class="sheet_1">
-              <%= image_tag album.pictures.first.image(:thumb)  %>
+              <%= responsive_image_tag picture(album,1).image(:thumb)  %>
             </span>
             <span class="sheet_2">
-              <%= image_tag album.pictures.first.image(:thumb)  %>
+              <%= responsive_image_tag picture(album,2).image(:thumb)  %>
             </span>
             <div class="cover">
               <div class="photo">
-                <%= image_tag album.pictures.first.image(:thumb)  %>
+                <%= responsive_image_tag cover(album).image(:thumb), :'2x' => cover(album).image(:thumb2x), :class => "hisrc"  %>
               </div>
               <div class="caption">
                 <h2><%= album.name  %></h2>

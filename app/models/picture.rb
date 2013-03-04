@@ -1,7 +1,7 @@
 class Picture < ActiveRecord::Base
   attr_accessible :desc, :name, :image
   belongs_to :album
-  has_attached_file :image, :styles => { :thumb => "100x100>" }
+  has_attached_file :image, :styles => { :large2x => "2048x2048>", :large => "1024x1024>", :thumb => "172x172>", :thumb2x => "344x344>" }
 
   include Rails.application.routes.url_helpers
 
