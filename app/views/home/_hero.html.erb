@@ -1,6 +1,6 @@
 <div class="hero">
   <div class="slider">
-    <ul>
+    <ul class="animate">
       <% @hero_products.each do |p| %>
         <li>
         <%= responsive_image_tag p.banner, alt: p.name, class: "hisrc", data: {href: p.store_link} %>

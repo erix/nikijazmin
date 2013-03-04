@@ -1,3 +1,4 @@
+@import "compass/css3/transition";
 $accent-color : #00DE00;
 
 h2 {
@@ -12,9 +13,16 @@ h2 {
   height: 310px;
   overflow: hidden;
 
-  ul li { // the size of the ul is set from javascript
-    float: left;
+  ul {
+    li { // the size of the ul is set from javascript
+      float: left;
+    }
   }
+}
+
+.animate {
+    @include single-transition(margin, 1s, ease-in-out);
+    @include transform3d(0);
 }
 
 .hero {

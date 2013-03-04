@@ -4,8 +4,19 @@ $.fn.slider = ->
   $ribbon_text = $(@find(".ribbon h3"))
   $store_link = $(@find(".store_badge a"))
   current = 0;
-  timer_interval = 3000 # 3 seconds
+  timer_interval = 3000 # next slide
   image_width = 0;
+
+  #add event listeners for transition end
+  $ul.on "transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", ->
+    # change the ribbon text and the store link
+    $ribbon_text.text $(images[current]).attr('alt')
+    href = $(images[current]).data('href')
+    if href
+      $store_link.parent().show()
+      $store_link.attr("href", $(images[current]).data("href"))
+    else
+      $store_link.parent().hide()
 
   click_handler = ->
     current += 1;
@@ -14,15 +25,7 @@ $.fn.slider = ->
       margin = '0'
     else
       margin = "-=#{image_width}"
-    $ul.animate {marginLeft: margin}, 600, ->
-      # change the ribbon text and the store link
-      $ribbon_text.text $(images[current]).attr('alt')
-      href = $(images[current]).data('href')
-      if href
-        $store_link.parent().show()
-        $store_link.attr("href", $(images[current]).data("href"))
-      else
-        $store_link.parent().hide()
+    $ul.css "margin-left", margin
 
   $ul.click(click_handler)
 
