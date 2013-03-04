@@ -1,3 +1,96 @@
-// Place all the styles related to the gallery controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$gallery-accent-color : rgb(255, 84, 255);
+.albums {
+
+  li {
+    // @include span-columns(2.375, 10);
+    // @include span-columns(3.16, 10);
+    // @include nth-omega(3n);
+    width: 261px;
+    // background-color: rgba(255,0,0,0.3);
+    float: left;
+  }
+}
+
+.stack {
+  position: relative;
+  display: inline-block;
+  width: 12em;
+  margin: 34px;
+  vertical-align: top;
+  padding: 10px;
+  background-color: white;
+  text-align: left;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+
+  .sheet_1, .sheet_2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 4%;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    text-align: right;
+    z-index: -1;
+    @include single-transition(all, 0.3s, linear);
+    @include rotate3d(0,0,1,-2.5deg);
+    margin-left: -1px; //FIXME: this shoudn't be needed but if not here then the sheet jumps 1px on hover
+  }
+
+  .sheet_2 {
+    z-index: -2;
+    @include rotate3d(0,0,1,-5.5deg);
+  }
+
+  img {
+    border: 1px solid #000;
+  }
+
+  .sheet_1 img,
+  .sheet_2 img {
+    position: relative;
+    display: block;
+    max-height: 80%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cover img {
+    position: relative;
+    display: block;
+    vertical-align: top;
+    width: 100%;
+    max-height: 80%;
+    margin: 0 0 10px 0;
+    z-index: 10;
+  }
+
+  h2 {
+    display: block;
+    height: 4em;
+    positiion: relative;
+    margin: 0;
+    padding: 1em 0;
+    font: 12px 'Chalkduster', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: $gallery-accent-color;
+  }
+
+  &:hover {
+    @include single-transition(all, 0.5s, ease-in-out);
+  }
+
+  &:hover .sheet_1 {
+    @include rotate3d(0,0,1,2deg);
+    margin-left: 15px;
+  }
+
+  &:hover .sheet_2 {
+    @include rotate3d(0,0,1,4deg);
+    margin-left: 30px;
+  }
+}

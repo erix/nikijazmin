@@ -1,3 +1,30 @@
 <div class="card">
   <%= render "shared/menu"  %>
 </div>
+
+<div class="card albums">
+  <div class="card-inner">
+    <ul>
+      <% for album in @albums %>
+        <li>
+          <div class="stack">
+            <span class="sheet_1">
+              <%= image_tag album.pictures.first.image(:thumb)  %>
+            </span>
+            <span class="sheet_2">
+              <%= image_tag album.pictures.first.image(:thumb)  %>
+            </span>
+            <div class="cover">
+              <div class="photo">
+                <%= image_tag album.pictures.first.image(:thumb)  %>
+              </div>
+              <div class="caption">
+                <h2><%= album.name  %></h2>
+              </div>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
