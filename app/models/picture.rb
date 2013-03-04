@@ -11,7 +11,7 @@ class Picture < ActiveRecord::Base
       "size" => read_attribute(:image_file_size),
       "url" => image.url(:original),
       "thumbnail_url" => image.url(:thumb),
-      "delete_url" => admin_album_picture_path(self.album_id, self),
+      "delete_url" => album_picture_path(self.album_id, self),
       "delete_type" => "DELETE"
     }
   end

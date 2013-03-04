@@ -29,7 +29,7 @@
           <% end %>
         <% end %>
 
-        <%= link_to [:admin, post], :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini btn-danger" do %>
+        <%= link_to post, :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini btn-danger" do %>
           <%= content_tag(:i, "", class: "icon-remove icon-white")  %>
           Delete
         <% end %>
