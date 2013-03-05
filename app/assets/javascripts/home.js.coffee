@@ -18,7 +18,7 @@ $.fn.slider = ->
     else
       $store_link.parent().hide()
 
-  click_handler = ->
+  timer_handler = ->
     current += 1;
     if current == images.length
       current = 0
@@ -27,7 +27,7 @@ $.fn.slider = ->
       margin = "-=#{image_width}"
     $ul.css "margin-left", margin
 
-  $ul.click(click_handler)
+  # $ul.click(click_handler)
 
   promises = []
   for image in images
@@ -37,7 +37,7 @@ $.fn.slider = ->
 
   # when all images loaded start the timer and set the correct width
   $.when.apply($, promises).done =>
-    setInterval(click_handler, timer_interval)
+    setInterval(timer_handler, timer_interval)
     image_width = $(images[0]).width() if images[0]
     $ul.width images.length * image_width
 
