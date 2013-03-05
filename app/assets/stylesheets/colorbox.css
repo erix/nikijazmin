@@ -20,6 +20,6 @@
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
 #cboxOverlay{background:#000;}
-#colorbox{ box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.62); }
-        #cboxClose{right:0; background-position:-100px -25px;}
+#colorbox{ box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.62); outline: 0;}
+        #cboxClose{ z-index: 99999; position: absolute; right:0; background-color: rgba(0,0,0,0.8); background-position:-100px -25px;}
         #cboxClose:hover{background-position:-100px 0px;}
