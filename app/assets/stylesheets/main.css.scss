@@ -1,15 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+
 $text-color : #888;
 
 @font-face {
   font-family: 'Chalkduster';
   src: url('Chalkduster.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'The Girl Next Door';
-  src: url('TheGirlNextDoor.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,7 +22,7 @@ body {
   background: url(background.png) repeat;
   margin-top: 1em;
   color: $text-color;
-  font-family: 'The Girl Next Door', cursive;
+  font-family: 'Architects Daughter', cursive;
 }
 
 p {
