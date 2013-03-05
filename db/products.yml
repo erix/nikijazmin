@@ -108,6 +108,8 @@
   icon: "/images/spotthedifference_icon.png"
   wide_banner: "/images/spotTheDifference.jpg"
   product_type: app
+  release_date: 2013-02-27
+  store_link: "https://itunes.apple.com/fi/app/spot-difference-niki-jazmin/id606776803?mt=8"
   locale: en
 -
   <<: *difference 
