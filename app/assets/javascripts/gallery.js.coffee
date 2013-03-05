@@ -15,6 +15,7 @@ jQuery ->
         currRs = $("#rs-slider").royalSlider(
           imageScaleMode: 'fit'
           keyboardNavEnabled: true
+          arrowsNavHideOnTouch: true
         ).data('royalSlider')
         updateLightboxSize()
       href: $(this).attr('href')
