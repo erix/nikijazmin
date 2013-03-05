@@ -5,6 +5,8 @@ class Picture < ActiveRecord::Base
 
   include Rails.application.routes.url_helpers
 
+  default_scope order('image_file_name ASC')
+
   def to_jq_upload
     {
       "name" => read_attribute(:image_file_name),
