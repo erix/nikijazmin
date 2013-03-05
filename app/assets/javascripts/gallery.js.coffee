@@ -29,16 +29,16 @@ jQuery ->
     if w > 1200
       w = '1024px'
       h = '768px'
-    else if w > 800
+    else if w < 800
       w = '90%'
       h = '90%'
     else
-      w = '60%'
-      h = '60%'
+      w = '80%'
+      h = '80%'
 
     $.colorbox.resize
-      width: w
-      height: h
+      width: w #'100%'
+      height: h #'100%'
 
     currRs.updateSliderSize() if currRs
     # fix scrolbar space
