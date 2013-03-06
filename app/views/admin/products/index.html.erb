@@ -16,10 +16,14 @@
           Edit
         <% end %>
         <%= link_to  new_product_review_path(product), class: "btn btn-mini" do %>
-          <%= content_tag(:i, "", class: "icon-edit") %>
+          <%= content_tag(:i, "", class: "icon-comment") %>
           Create review
         <% end %>
-    </td>
+        <%= link_to  product_reviews_path(product), class: "btn btn-mini" do %>
+          <%= content_tag(:i, "", class: "icon-list") %>
+          Show reviews
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>

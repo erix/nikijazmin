@@ -1,0 +1,23 @@
+<% title "Reviews for #{@product.name}" %>
+
+<table class="table table-striped">
+  <tr>
+    <th>Date</th>
+    <th>Actions</th>
+  </tr>
+  <% for review in @reviews %>
+    <tr>
+      <td><%= review.updated_at.to_date %></td>
+      <td>
+        <%= link_to  edit_product_review_path(@product, review), class: "btn btn-mini" do %>
+          <%= content_tag(:i, "", class: "icon-edit") %>
+          Edit
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New review", new_product_review_path(@product), class: "btn btn-success" %></p>
+
+
