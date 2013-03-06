@@ -1,0 +1,21 @@
+<div class="card reviews">
+  <div class="card-inner">
+    <h2><%= t 'home.reviews'  %></h2>
+    <% @reviews.each_with_index do |review, i| %>
+      <% if i == 0 %>
+      <div class="review">
+      <% else %>
+      <div class="review hidden">
+      <% end %>
+
+        <div class="product-icon">
+          <%= image_tag review.product.icon %>
+        </div>
+        <%= dat_markdown review.quote %>
+        <%= image_tag review.image(:normal), :class => "review-image" %>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+

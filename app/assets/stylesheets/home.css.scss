@@ -91,6 +91,46 @@ h2 {
   }
 }
 
+.reviews {
+  .card-inner {
+    position: relative;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    height: 18em;
+  }
+
+  h2 {
+    @include pre(1);
+  }
+
+  .review {
+    width: columns(9);
+    height: 10em;
+    position: absolute;
+    @include transition(opacity 1s linear);
+
+    .product-icon {
+      @include pre(1);
+      @include span-columns(2);
+      clear: both;
+    }
+
+    p {
+      @include span-columns(7 omega);
+    }
+
+    .review-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+}
+
 .about {
   .about-inner {
     overflow: hidden;

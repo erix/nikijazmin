@@ -41,5 +41,17 @@ $.fn.slider = ->
     image_width = $(images[0]).width() if images[0]
     $ul.width images.length * image_width
 
+
+$.fn.crossFade = ->
+  elems = this.toArray()
+  i = 0
+  setInterval( ->
+    $(elems[i]).addClass("hidden")
+    i = if i < elems.length - 1 then i + 1 else 0
+    $(elems[i]).removeClass("hidden")
+  , 5000)
+
+
 $ ->
   $(".slider").slider()
+  $(".review").crossFade()
