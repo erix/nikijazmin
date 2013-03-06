@@ -9,10 +9,10 @@
       <% end %>
 
         <div class="product-icon">
-          <%= image_tag review.product.icon %>
+          <%= responsive_image_tag review.product.icon %>
         </div>
         <%= dat_markdown review.quote %>
-        <%= image_tag review.image(:normal), :class => "review-image" %>
+        <%= responsive_image_tag review.image(:normal), :"2x" => review.image, :class => "review-image" %>
 
       </div>
     <% end %>
