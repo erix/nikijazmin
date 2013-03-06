@@ -6,7 +6,7 @@ class Admin::SessionsController < Admin::AdminController
     user = User.find_by_name(params[:name])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to admin_posts_path
+      redirect_to posts_path
     else
       flash[:error] = "Invalid username or password"
       render "new"

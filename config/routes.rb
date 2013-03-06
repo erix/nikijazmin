@@ -2,7 +2,6 @@ Nikijazmin::Application.routes.draw do
 
   scope path: "/admin", module: "admin" do
     resources :users
-    resources :sessions
     resources :posts
     resources :products do
       resources :reviews
@@ -10,12 +9,13 @@ Nikijazmin::Application.routes.draw do
     resources :albums do
       resources :pictures
     end
-    match "/login" => "sessions#new", as: "login"
-    match "/logout" => "sessions#destroy", as: "logout"
     match "/posts/publish/:id" => "posts#publish", :as => "publish_post"
   end
 
   namespace :admin do
+    resources :sessions
+    match "/login" => "sessions#new", as: "login"
+    match "/logout" => "sessions#destroy", as: "logout"
     match "/" => redirect("/admin/posts")
   end
 
