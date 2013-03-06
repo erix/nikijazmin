@@ -4,7 +4,9 @@ Nikijazmin::Application.routes.draw do
     resources :users
     resources :sessions
     resources :posts
-    resources :products
+    resources :products do
+      resources :reviews
+    end
     resources :albums do
       resources :pictures
     end

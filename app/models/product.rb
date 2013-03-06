@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   TYPES = {:book => 0, :app => 1}
+  has_many :reviews
 
   attr_accessible :banner, :desc, :icon, :mini_banner, :wide_banner, :name, :store_link, :in_slider, :product_type, :release_date, :locale
 
