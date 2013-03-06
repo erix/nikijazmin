@@ -13,6 +13,10 @@
           <%= content_tag(:i, "", class: "icon-edit") %>
           Edit
         <% end %>
+        <%= link_to  [@product, review], :confirm => 'Are you sure?', :method => :delete, class: "btn btn-mini btn-danger" do %>
+          <%= content_tag(:i, "", class: "icon-remove icon-white") %>
+          Edit
+        <% end %>
       </td>
     </tr>
   <% end %>

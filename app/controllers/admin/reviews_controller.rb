@@ -13,7 +13,7 @@ class Admin::ReviewsController < Admin::AdminController
     @review = @product.reviews.build(params[:review])
     if @review.save
       flash[:success] = "New product review created"
-      redirect_to products_path
+      redirect_to product_reviews_path(@product)
     else
       flash[:error] = "Failed to create new review"
       redirect_to :new
@@ -33,6 +33,12 @@ class Admin::ReviewsController < Admin::AdminController
       flash[:error] = "Failed to update review"
       redirect_to :edit
     end
+  end
+
+  def destroy
+    Review.destroy(params[:id])
+    flash[:success] = "Review deleted"
+    redirect_to product_reviews_path(@product)
   end
 
   private
