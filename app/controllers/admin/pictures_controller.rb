@@ -10,7 +10,7 @@ class Admin::PicturesController < ApplicationController
   end
 
   def show
-    respond_with Picture(params[:id])
+    respond_with Picture.find(params[:id])
   end
 
   def create

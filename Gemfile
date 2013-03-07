@@ -26,6 +26,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "mocha", :group => :test
+
 group :production do
     gem 'pg', '0.12.2'
 end
@@ -37,18 +39,7 @@ gem 'dimensions-rails'
 gem 'rails-i18n'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
 gem 'jquery-fileupload-rails'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
-
-gem "mocha", :group => :test
+gem 'heroku'
+gem 'figaro'
