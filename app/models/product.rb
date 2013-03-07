@@ -23,11 +23,11 @@ class Product < ActiveRecord::Base
   def product_type=(t)
     # accept string, symbol and number
     if t.class == String
-      t = t.to_sym
-    elsif t.class == Fixnum
+      t = Product.type(t.to_sym) || t.to_i
+    elsif t.class == Symbol
       t = Product.type(t)
     end
-    write_attribute(:product_type, Product.type(t))
+    write_attribute(:product_type, t)
   end
 
   def app?
