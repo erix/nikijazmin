@@ -69,6 +69,7 @@ GEM
     figaro (0.6.1)
       rails (>= 3, < 5)
     fssm (0.2.10)
+    google-analytics-rails (0.0.3)
     heroku (2.35.0)
       heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
@@ -179,6 +180,7 @@ DEPENDENCIES
   compass-rails
   dimensions-rails
   figaro
+  google-analytics-rails
   heroku
   hisrc-rails
   jquery-fileupload-rails

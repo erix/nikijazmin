@@ -11,6 +11,9 @@ Nikijazmin::Application.configure do
     :path => "images/:class/:id.:style.:extension",
   }
 
+  # Google analytics
+  GA.tracker = "UA-35643427-1"
+
   # Code is not reloaded between requests
   config.cache_classes = true
 

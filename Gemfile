@@ -30,6 +30,7 @@ gem "mocha", :group => :test
 
 group :production do
     gem 'pg', '0.12.2'
+    gem 'google-analytics-rails'
 end
 
 gem 'jquery-rails'
