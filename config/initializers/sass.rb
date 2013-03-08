@@ -1,2 +1,4 @@
 # custom extension to retrive the retina filename
-# require 'assets/sass_retina'
+if defined?(Sass)
+  require 'assets/sass_retina'
+end
