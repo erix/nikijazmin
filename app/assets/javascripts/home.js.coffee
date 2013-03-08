@@ -44,11 +44,16 @@ $.fn.slider = ->
 
 $.fn.crossFade = ->
   elems = this.toArray()
+
+  # do npt crossfade if only 1 element
+  if elems.length is 1
+    return
+
   i = 0
   setInterval( ->
-    $(elems[i]).addClass("hidden")
+    $(elems[i]).addClass('hidden')
     i = if i < elems.length - 1 then i + 1 else 0
-    $(elems[i]).removeClass("hidden")
+    $(elems[i]).removeClass('hidden')
   , 5000)
 
 
