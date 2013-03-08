@@ -4,7 +4,7 @@ $.fn.slider = ->
   $ribbon_text = $(@find(".ribbon h3"))
   $store_link = $(@find(".store_badge a"))
   current = 0;
-  timer_interval = 3000 # next slide
+  timer_interval = 8000 # next slide
   image_width = 0;
 
   #add event listeners for transition end
@@ -44,8 +44,9 @@ $.fn.slider = ->
 
 $.fn.crossFade = ->
   elems = this.toArray()
+  speed = 10000; #10 sec transition
 
-  # do npt crossfade if only 1 element
+  # do not crossfade if only 1 element
   if elems.length is 1
     return
 
@@ -54,7 +55,7 @@ $.fn.crossFade = ->
     $(elems[i]).addClass('hidden')
     i = if i < elems.length - 1 then i + 1 else 0
     $(elems[i]).removeClass('hidden')
-  , 5000)
+  , speed)
 
 
 $ ->
