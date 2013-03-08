@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306112908) do
+ActiveRecord::Schema.define(:version => 20130308091654) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -42,18 +42,21 @@ ActiveRecord::Schema.define(:version => 20130306112908) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.text     "desc",         :limit => 255
-    t.string   "icon"
+    t.text     "desc",              :limit => 255
     t.string   "banner"
     t.string   "mini_banner"
     t.string   "store_link"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.boolean  "in_slider"
     t.integer  "product_type"
     t.date     "release_date"
     t.string   "wide_banner"
     t.string   "locale"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
   end
 
   create_table "reviews", :force => true do |t|

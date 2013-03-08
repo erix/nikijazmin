@@ -3,5 +3,5 @@ class Review < ActiveRecord::Base
   belongs_to :product
 
   #expected to upload retina images
-  has_attached_file :image, :styles => { :normal => "50%", :thumb => "50x50>"}, :default_url => ":style/missing.png"
+  has_attached_file :image, :styles => { :normal => "50%", :thumb => "50x50>"}
 end

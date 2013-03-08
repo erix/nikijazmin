@@ -4,6 +4,23 @@ class Product < ActiveRecord::Base
 
   attr_accessible :banner, :desc, :icon, :mini_banner, :wide_banner, :name, :store_link, :in_slider, :product_type, :release_date, :locale
 
+  has_attached_file( :icon,
+    :styles =>
+    lambda do |icon|
+      if icon.instance.app?
+        {
+          :large => '50%',
+          :small => '57x57>',
+          :small2x => '114x114>'
+        }
+      else
+        # book
+        {
+          :large => '50%'
+        }
+      end
+    end)
+
   scope :coming_soon, where(:release_date => nil)
   scope :books, where(:product_type => TYPES[:book])
   scope :apps, where(:product_type => TYPES[:app])
@@ -15,10 +32,6 @@ class Product < ActiveRecord::Base
   def self.type(t)
     TYPES[t]
   end
-
-  # def product_type
-  #   TYPES.key(read_attribute(:product_type))
-  # end
 
   def product_type=(t)
     # accept string, symbol and number
