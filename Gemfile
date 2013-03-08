@@ -8,6 +8,7 @@ gem 'rails', '3.2.12'
 group :development do
   gem 'sqlite3'
   gem 'nifty-generators'
+  gem 'pry'
 end
 
 # Gems used only for assets and not required
