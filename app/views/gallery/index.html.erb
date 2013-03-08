@@ -10,14 +10,14 @@
         <a href="<%= album_pictures_path(album)  %>" class="colorbox-item">
           <div class="stack">
             <span class="sheet_1">
-              <%= responsive_image_tag picture(album,1).image(:thumb)  %>
+              <%= responsive_image_tag picture(album,1).image.url(:thumb)  %>
             </span>
             <span class="sheet_2">
-              <%= responsive_image_tag picture(album,2).image(:thumb)  %>
+              <%= responsive_image_tag picture(album,2).image.url(:thumb)  %>
             </span>
             <div class="cover">
               <div class="photo">
-                <%= responsive_image_tag cover(album).image(:thumb), :'2x' => cover(album).image(:thumb2x), :class => "hisrc"  %>
+                <%= responsive_image_tag cover(album).image.url(:thumb), :'2x' => cover(album).image.url(:thumb2x), :class => "hisrc"  %>
               </div>
               <div class="caption">
                 <h2><%= album.name  %></h2>
