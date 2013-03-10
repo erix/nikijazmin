@@ -21,6 +21,8 @@ class Product < ActiveRecord::Base
       end
     end)
 
+  after_post_process :save_image_dimensions
+
   scope :coming_soon, where(:release_date => nil)
   scope :books, where(:product_type => TYPES[:book])
   scope :apps, where(:product_type => TYPES[:app])
@@ -53,5 +55,23 @@ class Product < ActiveRecord::Base
 
   def coming_soon?
     store_link.nil?
+  end
+
+  def icon_size(style)
+    if self.icons_geometry
+      sizes = JSON.parse self.icons_geometry
+      sizes[style.to_s]
+    end
+    ""
+  end
+
+  private
+  def save_image_dimensions
+    sizes = Hash.new
+    icon.styles.keys.each do |style|
+      size = Paperclip::Geometry.from_file(icon.queued_for_write[style])
+      sizes[style] = size.to_s
+    end
+    self.icons_geometry = sizes.to_json
   end
 end

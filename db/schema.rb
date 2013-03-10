@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308091654) do
+ActiveRecord::Schema.define(:version => 20130309113001) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20130308091654) do
     t.string   "icon_content_type"
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
+    t.string   "icons_geometry"
   end
 
   create_table "reviews", :force => true do |t|
