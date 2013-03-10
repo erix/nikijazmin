@@ -61,8 +61,9 @@ class Product < ActiveRecord::Base
     if self.icons_geometry
       sizes = JSON.parse self.icons_geometry
       sizes[style.to_s]
+    else
+      ""
     end
-    ""
   end
 
   private
