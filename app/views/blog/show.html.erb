@@ -1,4 +1,7 @@
-<% set_meta_tags :title => @post.title %>
+<% set_meta_tags :title => @post.title, 
+                 :og => { :image => "http://www.nikijazmin.com#{image_path('icon.jpg')}" }
+%>
+
 <div class="card">
   <%= render "shared/menu"  %>
 </div>
