@@ -14,7 +14,7 @@
   </div>
   <div class="control-group">
     <div class="controls">
-      <%= image_tag @review.image(:thumb) unless @review.new_record?  %>
+      <%= image_tag @review.image.url(:normal) unless @review.new_record?  %>
     </div>
   </div>
   <div class="control-group">
