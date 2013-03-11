@@ -25,6 +25,7 @@ Nikijazmin::Application.routes.draw do
     match "/blog/post/:id" => 'blog#show', :as => 'blog_post'
     match "/blog", :to => 'blog#index'
     match "/gallery", :to => 'gallery#index'
+    match "/privacy", :to => 'home#privacy'
     root :to => 'home#index'
   end
 

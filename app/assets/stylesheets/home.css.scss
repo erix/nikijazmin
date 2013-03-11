@@ -1,6 +1,14 @@
 @import "compass/css3/transition";
 $accent-color : #00DE00;
 
+h1 {
+  color: $accent-color;
+  font-size: 1.5em;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
 h2 {
   color: $accent-color;
   font-size: 1.2em;
@@ -169,5 +177,11 @@ h2 {
     @include span-columns(8);
     @include push(1);
     padding-top: 3em;
+  }
+}
+
+.privacy {
+  .text-wrapper {
+    padding-bottom: 1em;
   }
 }

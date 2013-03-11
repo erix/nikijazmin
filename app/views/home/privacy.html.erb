@@ -1,0 +1,13 @@
+<div class="card">
+  <%= render "shared/menu" %>
+</div>
+<div class="card privacy">
+  <div class="about-inner">
+    <div class="text-wrapper">
+      <%= dat_markdown t('privacy')  %>
+      <%= mail_to "info@nikijazmin.com", "info@nikijazmin.com", :encode => "hex", class: "email"  %>
+    </div>
+  </div>
+</div>
+
+

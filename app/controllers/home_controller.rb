@@ -3,4 +3,7 @@ class HomeController < ApplicationController
     @hero_products = Product.where(:in_slider => true, :locale => I18n.locale)
     @reviews = Review.all
   end
+
+  def privacy
+  end
 end
