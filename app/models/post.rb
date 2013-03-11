@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :title, :text, :published_at
+  attr_accessible :title, :text, :published_at, :locale
 
   scope :published, where("published_at IS NOT NULL")
 
