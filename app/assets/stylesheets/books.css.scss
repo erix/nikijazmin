@@ -3,6 +3,7 @@ $books-accent-color : rgb(253, 0, 0);
   .text-container {
     @include span-columns(7 omega);
     margin-top: 4em;
+    margin-bottom: 4em;
     h2 {
       color: $books-accent-color;
     }

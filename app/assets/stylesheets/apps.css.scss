@@ -32,7 +32,7 @@ a[href*="youtu.be"] {
   @include bleed(0);
   @include bleed($gutter-width, right);
   .card-inner {
-    height: 35em;
+    height: 38em;
     @include bleed(0);
     @include bleed($gutter-width, right);
     padding-left: $gutter-width;
@@ -47,7 +47,7 @@ a[href*="youtu.be"] {
   @include bleed(0);
   @include bleed($gutter-width, left);
   .card-inner {
-    height: 35em;
+    height: 38em;
     @include bleed(0);
     @include bleed($gutter-width, left);
     padding-right: $gutter-width;
