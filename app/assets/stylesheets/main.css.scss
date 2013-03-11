@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
 
 $text-color : #888;
 
@@ -31,7 +32,7 @@ p {
 }
 
 h1, h2 {
-  font-family: 'Chalkduster', sans-serif;
+  font-family: 'Chalkduster', 'Walter Turncoat', cursive;
 }
 
 header {
@@ -65,7 +66,7 @@ header {
 
 .navigation {
   padding-left: 0;
-  font-family: "Chalkduster", sans-serif;
+  font-family: "Chalkduster", 'Walter Turncoat', cursive;
   text-transform: uppercase;
   overflow: hidden;
 
@@ -217,7 +218,7 @@ footer {
     margin-left: 95px;
     color: #FFF;
     font-size: 18px;
-    font-family: "Chalkduster", sans-serif;
+    font-family: "Chalkduster", 'Walter Turncoat', cursive;
     text-transform: uppercase;
     text-align: center;
     @include rotate(23deg);

@@ -4,12 +4,12 @@ $blog-accent-color : rgb(255, 148, 3);
   .text-container {
     @include span-columns(8);
     @include pre(1);
-    padding-top: 1em;
+    padding-top: 2em;
   }
   .date {
     float: right;
     color: $blog-accent-color;
-    font-family: 'Chalkduster', sans-serif;
+    font-family: 'Chalkduster', 'Walter Turncoat', cursive;
   }
   h2 {
     color: $blog-accent-color;
