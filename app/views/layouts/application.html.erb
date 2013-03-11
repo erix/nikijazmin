@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nikijazmin</title>
+  <%= display_meta_tags :site => "Niki & Jazmin" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production?  %>
+  <link rel="image_src" href="http://www.nikijazmin/assets/icon.jpg" />
 </head>
 <body>
   <div id="fb-root"></div>
