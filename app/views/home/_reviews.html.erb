@@ -9,7 +9,7 @@
       <% end %>
 
         <div class="product-icon">
-          <%= responsive_image_tag review.product.icon.url(:large), :"2x" => review.product.icon.url, :class => "hisrc" %>
+          <%= product_icon_tag review.product, :large  %>
         </div>
         <%= dat_markdown review.quote %>
         <%= link_to responsive_image_tag(review.image.url(:normal), :"2x" => review.image.url, :class => "review-image hisrc"), review.link %>

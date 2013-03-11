@@ -17,7 +17,7 @@
       <% end %>
 
       <div class="text-container">
-        <%= responsive_image_tag app.icon.url(:small), :"2x" => app.icon.url(:small2x), class: "app-icon hisrc" %>
+        <%= product_icon_tag app, :small, :small2x  %>
         <h2><%= app.name %></h2>
         <p><%= dat_markdown(app.desc) %></p>
       </div>

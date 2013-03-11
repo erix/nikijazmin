@@ -10,7 +10,7 @@
     <% end %>
 
     <div class="card-inner">
-      <%= icon_tag book  %>
+      <%= product_icon_tag book, :large, :original, :class => "product-icon" %>
       <div class="text-container">
         <h2><%= book.name  %></h2>
         <p><%= dat_markdown(book.desc) %></p>
