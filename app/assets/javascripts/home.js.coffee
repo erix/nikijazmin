@@ -7,6 +7,10 @@ $.fn.slider = ->
   timer_interval = 8000 # next slide
   image_width = 0;
 
+  # remove store badge if no link
+  if $store_link.attr('href') == ""
+    $store_link.parent().hide()
+
   #add event listeners for transition end
   $ul.on "transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", ->
     # change the ribbon text and the store link
