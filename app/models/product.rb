@@ -54,7 +54,7 @@ class Product < ActiveRecord::Base
   end
 
   def coming_soon?
-    store_link.nil?
+    release_date.nil?
   end
 
   def icon_size(style)
