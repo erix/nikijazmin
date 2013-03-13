@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def store_badge(product)
-    if product.store_link
+    unless product.store_link.blank?
       badge = product.app? ? "AppStore.svg" : "iBookstore.svg"
       content_tag "div", link_to(image_tag(badge), product.store_link), class: "store-link"
     end
