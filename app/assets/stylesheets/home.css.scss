@@ -126,10 +126,6 @@ h2 {
     p {
       @include span-columns(7 omega);
 
-      em {
-        font-size: 20px;
-        color: #000;
-      }
     }
 
     .review-image {
