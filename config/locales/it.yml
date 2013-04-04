@@ -1,0 +1,27 @@
+it:
+  nav:
+    home: Home
+    apps: Apps
+    books: Libri
+    blog: Blog
+    gallery: Galleria
+  home:
+    welcome:
+      title: Benvenuti a Niki & Jazmin
+      text: |
+        Niki e Jazmin sono due piccole bambine gemelle. Venite a conoscerle attraverso racconti basati su fatti di vita reale. Noi crediamo che questi fatti possano accadere nella vita di ciascun bambino. Leggi le nostre storie nei nostri libri e gioca con noi con le nostre applicazioni.
+    reviews: Dalle recensioni
+    about:
+      title: La nostra storia
+      text: |
+        Come madre di due bambine gemelle ho pensato che sarebbe stato un grande regalo per le mie figlie scrivere un libro per bambini sulle storie della loro vita - come un bel ricordo della loro infanzia. Molto spesso mi chiedono - ora che hanno 4 anni - "Mamma, raccontaci della tua infanzia, raccontaci alcune storie di cosa hai fatto tu quando eri bambina!" E anche se ho tanti bellissimi ricordi, non ricordo molto dei tempi in cui avevo la loro età. Spero di poterle aiutare un pò con queste storie. 
+
+        Aggiungendo un pò di sapore alle storie, ho anche creato dei libri interattivi e diverse applicazioni per iPad con Niki & Jazmin. Ho ricevuto tante indicazioni dalle mie figlie su cosa piace o non piace in certi giochi. Ho cercato di combinare queste indicazioni e di realizzare l'applicazione per i loro gusti.
+
+        Credo che le storie che ho scritto e le applicazioni che ho realizzato possano aiutare altri bambini ad imparare nuove cose e che loro possano anche trovare alcuni eventi familiari, simili a quelli della loro vita.
+
+        Spero che amerete le storie di Niki e Jazmin così come le ho amate io creandole!
+
+         ~ Tímea Fülöp ~
+  coming_soon: In Arrivo
+

@@ -19,7 +19,7 @@ Nikijazmin::Application.routes.draw do
     match "/" => redirect("/admin/posts")
   end
 
-  scope ":locale", locale: /en|hu|fi/ do
+  scope ":locale", locale: /en|hu|fi|it/ do
     match "/books", :to => 'books#index'
     match "/apps", :to => 'apps#index'
     match "/blog/post/:id" => 'blog#show', :as => 'blog_post'
