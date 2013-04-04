@@ -12,7 +12,7 @@
           <%= product_icon_tag review.product, :large  %>
         </div>
         <%= dat_markdown review.quote %>
-        <%= link_to review_image_tag(review, :normal, :original, :class => "review-image")%>
+        <%= link_to review_image_tag(review, :normal, :original, :class => "review-image"), review.link %>
 
       </div>
     <% end %>
