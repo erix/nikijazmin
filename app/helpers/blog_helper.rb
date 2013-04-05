@@ -5,6 +5,7 @@ module BlogHelper
     locale[:hu] = 'hu_HU'
     locale[:fi] = 'fi_FI'
     locale[:en] = 'en_US'
+    locale[:it] = 'it_IT'
     "//connect.facebook.net/#{locale[I18n.locale]}/all.js#xfbml=1"
   end
 end
