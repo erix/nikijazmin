@@ -10,7 +10,7 @@
     <% end %>
 
     <div class="card-inner">
-      <% if app.wide_banner  %>
+      <% if app.wide_banner && !app.wide_banner.blank?  %>
         <%= responsive_image_tag app.wide_banner, class: "wide-banner hisrc"  %>
       <% else %>
         <%= responsive_image_tag app.mini_banner, class: "mini-banner hisrc" %>
