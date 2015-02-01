@@ -1,4 +1,5 @@
 class Admin::ProductsController < Admin::AdminController
+  before_filter :authorize
 
   def index
     @products = Product.all

@@ -1,4 +1,6 @@
 class Admin::AlbumsController < Admin::AdminController
+  before_filter :authorize
+
   def index
     @albums = Album.all
   end

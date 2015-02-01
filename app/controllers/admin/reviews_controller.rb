@@ -1,4 +1,5 @@
 class Admin::ReviewsController < Admin::AdminController
+  before_filter :authorize
   before_filter :fetch_product
 
   def index

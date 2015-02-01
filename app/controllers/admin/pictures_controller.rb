@@ -1,4 +1,5 @@
 class Admin::PicturesController < ApplicationController
+  before_filter :authorize
   respond_to :json, :html
 
   def index
